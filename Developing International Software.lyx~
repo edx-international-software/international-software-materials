@@ -1268,8 +1268,15 @@ You need to watch out for these differences between markets
 \series default
 .
  Otherwise, you will end up with a scenario like this, and you might lose
- all the money that you made in your first rollout with the next rollout
- by going into an international market.
+ all the money that you made in your first rollout with the next 
+\series bold
+rollout
+\series default
+ by going 
+\series bold
+into an international market
+\series default
+.
 \end_layout
 
 \begin_layout Subsection

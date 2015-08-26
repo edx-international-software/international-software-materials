@@ -1292,8 +1292,12 @@ Properly globalized software has a much better chance of being successful
 \end_layout
 
 \begin_layout Standard
-Here’s a collection of true stories from your instructors’ collective experience
-s that illustrate what can go wrong, even when you’re careful.
+Here’s a 
+\series bold
+collection of true stories
+\series default
+ from your instructors’ collective experiences that illustrate what can
+ go wrong, even when you’re careful.
 \end_layout
 
 \begin_layout Subsubsection*
