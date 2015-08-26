@@ -1,0 +1,5052 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+% hack better font 
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+
+% hack bold in caption
+\usepackage[labelfont=bf]{caption} 
+
+% hack change caption ":" into " ."
+% bisa juga "space", "colon", "semicolon" etc
+\captionsetup{labelsep=period}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #718c00
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Developing International Software
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Last updated on 20 Agustus 2015 by jibi-edx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Module 1
+\end_layout
+
+\begin_layout Section
+Why Globalize Software
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Let's talk about 
+\series bold
+why it's importance to make software world ready
+\series default
+.
+ Nadine, why don't you look at this from a business point of view? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Nadine
+\color inherit
+] I'm happy to do that, Bjorn.
+ Any software project or indeed any product development project at all starts
+ with an idea and, be successful that idea has to fulfill some kind of need
+ in the market.
+ Whatever idea you come up with, your natural human instinct is going to
+ be to see it through your own lens and in the context of your own life.
+ This isn't necessarily a bad thing, but go 
+\series bold
+do an internet search on
+\series default
+ 
+\series bold
+products that flopped overseas
+\series default
+.
+ You'll see some really big company names in your results.
+ Actually, you should go ahead and share some of the best stories you find
+ in the course wiki, or if you have your own experiences you should share
+ them.
+ Bjorn and I have plenty of great stories on this topic.
+ The lesson is, 
+\series bold
+you can't force fit a product into other markets
+\series default
+.
+ When you're considering a market you have to ask yourself some key questions.
+ For example 
+\series bold
+does my software fulfill a need in this market? Will anybody use it?
+\series default
+ Just because somebody finds your app really useful in one place doesn't
+ mean people someplace else are going to find it useful.
+ Or that they'll want to use your app over something that was built in their
+ own country.
+ There are many examples of this.
+ Okay so, perhaps your software does fulfill a need and people will want
+ to use it.
+ But the next question is 
+\series bold
+would they pay to use it?
+\series default
+ Okay, let's say that they pay to use it.
+ Now the question becomes 
+\series bold
+will they pay enough to use it to make it worth my while to send it to them?
+\series default
+ The amount people would be willing to pay in the United States could be
+ an entire month's wages in another economy.
+ All right, let's say people will pay enough for your app to make it worth
+ your while.
+ The next question is 
+\series bold
+can it become popular enough for lots of people to pay for it to make it
+ really worth your while?
+\series default
+.
+ 
+\series bold
+So if you answered no to any of these questions it doesn't mean you should
+ abandon your idea
+\series default
+, right Bjorn? 
+\series bold
+You may need to adjust it
+\series default
+, or to use a term you'll hear a lot in this course, 
+\series bold
+you may need to localize it
+\series default
+.
+ That is, you have to account for market differences, so Bjorn, why don't
+ you take us through what some differences there are? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Sure.
+ I mean, the obvious one is that people speak
+\series bold
+ different languages
+\series default
+.
+ Languages use 
+\series bold
+different words
+\series default
+, but they also use 
+\series bold
+different scripts
+\series default
+ and have 
+\series bold
+different grammar rules
+\series default
+.
+ For example, the plural, which is in English just adding an s, in most
+ other languages have way more complicated rules.
+ Some languages use spaces, other languages don't.
+ Languages can be read left to right, right to left, or at times, top to
+ bottom.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, there are differences in country and regional standards, which include
+ things like 
+\series bold
+currency
+\series default
+, how they
+\series bold
+ format an address
+\series default
+, how they 
+\series bold
+format dates, numbers
+\series default
+, whether they use 12 or 24 hour clocks, what 
+\series bold
+measurement systems
+\series default
+ they use, and 
+\series bold
+whether they start their week on a Sunday or on a Monday
+\series default
+.
+ Culture differences will influence how people respond to your software.
+ Someone here may say wow that's useful.
+ Someone there why would I ever need that? This comes down to how people
+ live.
+ Not just their taste, but their day-to-day reality.
+ Where and how do they typically 
+\series bold
+shop
+\series default
+? What kind of 
+\series bold
+money
+\series default
+ do they like to use? Cash, phones, credit cards, debit cards? How do they
+ 
+\series bold
+socialize
+\series default
+ and 
+\series bold
+network
+\series default
+ with each other? How does 
+\series bold
+climate or economic factors
+\series default
+ affect the way they do things.
+ Also you have to consider 
+\series bold
+cultural history and customs
+\series default
+.
+ What 
+\series bold
+colors
+\series default
+ mean, what 
+\series bold
+gestures
+\series default
+ mean, what 
+\series bold
+holidays
+\series default
+ are important, whether communications use more 
+\series bold
+words
+\series default
+ or more 
+\series bold
+pictures
+\series default
+.
+ That's all super important.
+ The same word or phrase can have completely different meanings in different
+ cultures, even if it's the same language.
+ It may be perfectly acceptable in one culture and titillating or horrifying
+ in another.
+ And, here's always 
+\series bold
+slang
+\series default
+.
+ Slang doesn't translate well and neither do cultural references.
+ What does the American expression, motherhood and apple pie, mean to someone
+ in China or rural India? What's a touchdown? What's a home run? These all
+ mean nothing outside of your cultural reference.
+ There are 
+\series bold
+technological differences
+\series default
+.
+ For example, levels of infrastructure.
+ 
+\series bold
+Some developing markets don't have access to high speed internet but have
+ access to cell towers
+\series default
+.
+ So they use phones instead of PCs or they use phones because PCs are too
+ expensive.
+ 
+\series bold
+In some countries the phone is the internet
+\series default
+.
+ Some areas have regular power outage which can affect servers or even data
+ centers which in turn can affect whether people can access your application.
+ Very important are 
+\series bold
+legal differences
+\series default
+.
+ European Union is very strict about 
+\series bold
+consumer privacy
+\series default
+.
+ And there are 
+\series bold
+political differences
+\series default
+, which can be very sensitive.
+ Just ask any software company that has displayed the map.
+ One country thinks it's fine, but another nearby country considers a national
+ affront.
+ 
+\end_layout
+
+\begin_layout Standard
+We will spend a lot of time in the rest of the course explaining language
+ and formatting differences and what kind of legal and other geopolitical
+ issues you need to look out for.
+ So Nadine, how about you cover the next areas?
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Nadine
+\color inherit
+] The key point is this, Bjorn.
+ 
+\series bold
+If you want your software to be successful worldwide, you need to accommodate
+ the differences we've discussed in your design and in your code
+\series default
+.
+ This involves processes called 
+\series bold
+globalization or internationalization and localization
+\series default
+.
+ We'll talk about these concepts throughout the course.
+ Suffice to say 
+\series bold
+if your software can't accommodate these differences, people in some regions
+ won't wanna use it or they won't be able to use it, and they certainly
+ won't pay for it
+\series default
+.
+ And if they're required to use it, for example, if you're at a company
+ and this becomes a standard tool, and 
+\series bold
+it doesn't work for everyone, it can affect your bottom line
+\series default
+.
+ Perhaps the product you're working on, it isn't about the software itself,
+ but the software plays a supporting role.
+ For example, in a device or part of a manufacturing process.
+ 
+\end_layout
+
+\begin_layout Standard
+Think about it, if your software doesn't work internationally, if it doesn't
+ work for multiple languages and multiple accounts it can even become a
+ safety issue.
+ Or perhaps you're not creating a product for profit or business use.
+ Maybe it's for social good.
+ The more globalized your software is, the more world ready it is, the more
+ good it can do, right Bjorn?
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah, I mean it all comes back to being world ready.
+ 
+\series bold
+If your software is world ready, it can be used in more countries, in more
+ markets, and you can make a bigger difference
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Why Is It Important to Globalize Software?
+\end_layout
+
+\begin_layout Standard
+Going into the global market unprepared can turn the release of an otherwise
+ exciting new product into a hellish slog that will make you wish you never
+ began the process.
+\end_layout
+
+\begin_layout Subsubsection*
+What a Hellish Slog Feels Like
+\end_layout
+
+\begin_layout Standard
+Let’s say you’re embarking on your first ever trip overseas—a whirlwind
+ tour of five countries on three continents.
+ You’ve been looking forward to this for years and you know it’s going to
+ be amazing.
+\end_layout
+
+\begin_layout Standard
+As your journey begins, your social media posts are full of enthusiasm and
+ pics of you:
+\end_layout
+
+\begin_layout Itemize
+Checking in at the airport.
+ 
+\end_layout
+
+\begin_layout Itemize
+Buying Duty Free items you don’t really need at only slightly-less-expensive
+ prices.
+ 
+\end_layout
+
+\begin_layout Itemize
+Relaxing in the waiting area, getting ready to board.
+ 
+\end_layout
+
+\begin_layout Standard
+You take off and select a movie from the chock-full on-board entertainment
+ system, but it’s in the language of the flight’s destination country—no
+ subtitles.
+ The same is true of the second and third movies you select.
+ You’ve seen all of the movies available in your own language, English,
+ so you turn to the passenger next to you to strike up a conversation.
+\end_layout
+
+\begin_layout Standard
+She only speaks a few words and phrases of your language, so you stumble
+ through in your high school version of her language about the adventure
+ ahead of you.
+ At first she looks befuddled, then amused, then horrified.
+ She summons the flight attendant, and after she makes a passionate appeal,
+ you find yourself reseated in the back of the plane, near the lavatory
+ and in between two screaming infants.
+\end_layout
+
+\begin_layout Standard
+Utterly drained upon arrival, you get stuck in the slowest line at customs,
+ where they single you out for a search.
+ The official spreads all of your personal items across a table, confiscating
+ several items that are not allowed into his country.
+ And after an hour of questioning, he releases you.
+\end_layout
+
+\begin_layout Standard
+At this point, all you want is a coffee.
+ You order one in the airport, handing a large bill to the vendor who promptly
+ hands it back, raising his hand in a gesture suggesting something unpleasant.
+ “They switched the currency last year,” the tourist standing in line behind
+ you comments smugly.
+ He reaches forward with the correct currency and exchanges it for the coffee
+ that should have been yours, ensuring that it passes right under your nose
+ as he takes his first sip.
+\end_layout
+
+\begin_layout Standard
+After another long wait, this time at the currency exchange window, you
+ get in a taxi, fumble through a mispronounced explanation of your destination
+ in the local language, to which your driver responds in perfect English.
+ You give a forced smile for a selfie that you post to social media along
+ with a story about your “fantastic flight” and “smooth traversal” of the
+ airport, unaware that the data your phone is chugging down in the background
+ will contribute to a $500 bill at the end of your month of travel.
+\end_layout
+
+\begin_layout Standard
+Once you arrive at your hotel, all you want is a shower.
+ It takes several minutes to figure out the hot and cold knobs are reversed,
+ and then … heaven.
+ The ancient, discount hotel (which you reserved online, of course) does
+ not supply hairdryers, but fortunately, you brought your own, except you
+ forgot the adapter.
+ A desperate call to the front desk scores you one.
+ So throwing on some clothes, in your dripping wet hair, you grumpily head
+ down to fetch it, head back up to your room, plug in your hairdryer with
+ a sigh of relief and…
+\end_layout
+
+\begin_layout Standard
+Sparks shoot out of the wall socket as a noxious, burning smell fills the
+ air.
+ Then the power goes out and you’re in the dark.
+ You open the window and then the room door to get a cross breeze going,
+ at which point you realize the power is not just out in your room, it’s
+ out the hallway.
+ In fact, there’s no power in the entire hotel.
+\end_layout
+
+\begin_layout Standard
+The hotel manager barrels toward your room, screaming and gesticulating
+ at you.
+ You try to explain you used what they gave you, until he barks, like you’re
+ an fool, that the voltages are different—you needed a converter in addition
+ to an adapter, which he would have loaned you had you told him you were
+ using a hairdryer.
+ It is now officially all your fault.
+\end_layout
+
+\begin_layout Standard
+Your next “cheerful” social media post explains that you’ve decided you
+ can better immerse yourself in the local culture by staying a youth hostel
+ and hanging out with the locals.
+\end_layout
+
+\begin_layout Subsubsection*
+The Lesson
+\end_layout
+
+\begin_layout Standard
+The point of this sad story is that trying to use software outside the market
+ it’s designed for can be just as hellish an experience.
+ It can be annoying, frustrating, infuriating, or even—in today’s technology-dep
+endent world—dangerous.
+\end_layout
+
+\begin_layout Standard
+Building software is a process of designing the user experience and then
+ writing code to deliver that experience.
+ It’s natural to design an experience that you would find useful in the
+ context of your own life and to write code with your experience in mind.
+ Doing so, however, could limit your success.
+\end_layout
+
+\begin_layout Subsection*
+Market Difference
+\end_layout
+
+\begin_layout Subsubsection*
+Market Need
+\end_layout
+
+\begin_layout Standard
+Any successful product starts with an idea that fulfills some kind of need.
+ Software is no exception.
+\end_layout
+
+\begin_layout Standard
+A product idea may strike you when you encounter a challenge in your everyday
+ life:
+\end_layout
+
+\begin_layout Itemize
+“I wish I had a way to...” 
+\end_layout
+
+\begin_layout Itemize
+“There must be an easier way to...” 
+\end_layout
+
+\begin_layout Itemize
+“I need a less expensive, more powerful, or more reliable alternative…”
+ 
+\end_layout
+
+\begin_layout Standard
+You may want to take advantage of the new technology:
+\end_layout
+
+\begin_layout Itemize
+“This dream scenario is now possible.” 
+\end_layout
+
+\begin_layout Itemize
+“This task will become much less complicated and expensive to complete.”
+ 
+\end_layout
+
+\begin_layout Itemize
+“It will be much faster/more entertaining/safer to do the things I want
+ or need to do.”
+\end_layout
+
+\begin_layout Standard
+Whatever idea you come up with, it will be your natural instinct to see
+ it through your own lens and in the context of your own life and surroundings.
+ Your product may be a hit with people who have similar tastes, lifestyles,
+ or experiences as you, but that doesn’t mean it will be a hit with everyone
+ else.
+ Some companies have learned this painfully and publicly.
+ Go do an Internet search on “products that flopped overseas,” and you’ll
+ see some really big names in your results.
+ Perhaps you have directly encountered a product that didn’t work for you
+ or people you know.
+ Go ahead and swap stories with your fellow students in the course wiki.
+\end_layout
+
+\begin_layout Standard
+You simply can’t force fit a product into other markets.
+ When you’re considering a market for your product, you first have to ask
+ yourself the following basic questions:
+\end_layout
+
+\begin_layout Itemize
+Would people in this market even want or need your software? 
+\end_layout
+
+\begin_layout Itemize
+Would anyone use it? Just because people find your app useful in one market,
+ doesn’t mean people in other markets will.
+ 
+\end_layout
+
+\begin_layout Itemize
+Would people in this market be able to use your software even if they wanted
+ to? Does their country have the right infrastructure? Do they have compatible
+ devices? Would any regulations prohibit its use? 
+\end_layout
+
+\begin_layout Itemize
+Is there any local competition? Would this market use your software over
+ something built in their own country? 
+\end_layout
+
+\begin_layout Itemize
+If your software does fill a need and people can and will want to use it,
+ the next question is, would they pay to use it? 
+\end_layout
+
+\begin_layout Itemize
+If they seem likely to pay for it, you now have to ask, “Will they pay enough
+ for it to make shipping my software to their market worth the effort required?”
+ The amount people willing to pay in the United States could be an entire
+ month’s wages in another economy.
+ Or perhaps the potential audience is much smaller in this market than it
+ is in yours.
+ 
+\end_layout
+
+\begin_layout Itemize
+This leads to the final question: “Can my software become popular enough
+ for lots of people to pay for it and make it really worth my while?”
+\end_layout
+
+\begin_layout Standard
+Perhaps you’re not building your software to sell in the mass market.
+ Perhaps you’re building an app or Line-of-Business application used inside
+ your company.
+ In this case, there’s another set of questions to ask :
+\end_layout
+
+\begin_layout Itemize
+Are there company employees who do not speak the language most employees
+ speak? 
+\end_layout
+
+\begin_layout Itemize
+Is this software critical for those employees to do their jobs? Will having
+ software that works for their market increase job satisfaction? 
+\end_layout
+
+\begin_layout Itemize
+Does the software need to account for marketplace or legal differences?
+ For example, software related to human resources might need to accommodate
+ different hiring laws or benefits requirements.
+ 
+\end_layout
+
+\begin_layout Standard
+If you answer no to any of these questions, that doesn’t mean you should
+ abandon your idea.
+ You may need to adjust it—or, to use a term you’ll hear a lot in this course—yo
+u may need to “localize” it.
+\end_layout
+
+\begin_layout Subsubsection*
+Software Localization: Accommodating Market Differences
+\end_layout
+
+\begin_layout Standard
+“Localizing” your software goes beyond translating the User Interface.
+ In fact, it isn’t always necessary to translate your UI; for example, many
+ markets will accept an English UI (at least initially).
+ But properly localized software should accommodate the local language,
+ as well as regional and national standards, and even local customs.
+\end_layout
+
+\begin_layout Standard
+So when you design and write your software, you need to be aware of the
+ following market differences:
+\end_layout
+
+\begin_layout Subsubsection*
+Language
+\end_layout
+
+\begin_layout Standard
+The obvious market difference (and the one most people think of first) is
+ that people speak different languages.
+ There are numerous aspects to this.
+ Languages in the same family use the same basic set of alphabetic characters.
+ We call that written form a “script.” For example, Western European languages
+ use the Latin script, Slavic languages use the Cyrillic script, and many
+ Middle Eastern languages use the Arabic script.
+ Some languages use a variation of a basic script; they may drop some characters
+, add characters, or use diacritic marks that change how a character is
+ pronounced.
+ Japanese uses multiple scripts: hiragana, katakana, romaji and kanji.
+\end_layout
+
+\begin_layout Standard
+People need a way to enter their language into your software, whether by
+ typing, inking (drawing the characters), or voice.
+ Once it receives input, your software needs to display text properly.
+ Depending on the language, you need to layout the text left-to-right, right-to-
+left, or top-to-bottom.
+ Some languages use spaces.
+ Others don’t.
+\end_layout
+
+\begin_layout Standard
+Grammar rules vary by language as well.
+ That may sound obvious, but many software programmers have fallen into
+ the trap of assuming that a sentence (or “string” in software parlance)
+ will have the same grammatical structure when translated.
+ This is often not the case.
+ In Japanese, the verb usually comes at the very end of the sentence, and
+ in both Japanese and French, possessives have a different form than they
+ do in English.
+ It’s not “Björn’s house,” it’s “house of Björn.”
+\end_layout
+
+\begin_layout Standard
+And then of course, numerous languages have “gendered” nouns which affect
+ declensions as well other grammar rules.
+\end_layout
+
+\begin_layout Subsubsection*
+Country and regional standards
+\end_layout
+
+\begin_layout Standard
+The same language can also be spoken or written differently depending on
+ the country.
+ This is where country and regional standards come into play.
+ You can’t just say, “Translate that into French.” Which French? French as
+ spoken in France, Canada, Belgium, Switzerland, or Senegal? If you say,
+ “make sure you can type in French,” you need to make sure you can enter
+ text using the various keyboard layouts that are standard in different
+ countries.
+ There are French, Belgian French, Canadian French, and Swiss French keyboards.
+ Written and voice input aren’t straightforward either.
+ Writing styles, pronunciation, and idiomatic expressions (aka slang) vary
+ by country or culture, even for the same language.
+\end_layout
+
+\begin_layout Subsubsection*
+Sorting order
+\end_layout
+
+\begin_layout Standard
+Not only does alphabetical order vary among languages, but conventions for
+ sequencing items in dictionaries and phone books can also be quite different.
+ The rules for sorting and comparing text are language-specific, even within
+ languages based on the same script.
+\end_layout
+
+\begin_layout Standard
+In Swedish, for example, some vowels with an accent sort after "Z," whereas
+ in other European countries an accented vowel comes right after the plain
+ version of the same vowel.
+ Asian languages have several different sort orders based on phonetics,
+ radical order, number of pen strokes, and so on.
+\end_layout
+
+\begin_layout Subsection*
+Cultural Difference
+\end_layout
+
+\begin_layout Quote
+“If I'm selling to you, I speak your language.
+ If I'm buying, dann müssen Sie Deutsch sprechen (then you must speak German)”
+ —Willy Brandt 
+\end_layout
+
+\begin_layout Standard
+Cultural differences influence how people respond to software, from whether
+ they like its appearance to whether they find it useful in their day-to-day
+ life.
+ Culture is a complex amalgamation of belief systems, habits, tastes, social
+ norms, artistic expression, regional history, tradition, and so forth.
+ It is influenced by external factors such as geography, climate, economic
+ development, and politics.
+ Culture is an entire field of study in and of itself, but for our purposes,
+ we just need to know that differences can be substantial depending on where
+ you are in the world, and making assumptions based on the culture you come
+ from can get you into trouble.
+\end_layout
+
+\begin_layout Standard
+Here’s a partial list of things you should think about that can have a strong
+ impact on how successful your software or software-driven product will
+ be:
+\end_layout
+
+\begin_layout Paragraph
+Religious beliefs 
+\end_layout
+
+\begin_layout Standard
+An app that gives detailed information on types of beer might be huge in
+ Germany, but it would be considered offensive in many Muslim countries.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Population density
+\end_layout
+
+\begin_layout Standard
+The United States is a very large country with wide open spaces and large
+ houses that can accommodate lots of stuff, whereas Japan is a country the
+ size of Montana where real estate is at a premium and many people live
+ in very small apartments, making technology with a small footprint attractive.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Holidays and other seasons that drive purchases 
+\end_layout
+
+\begin_layout Standard
+Many countries celebrate Valentine’s Day, Mother’s Day, Father’s Day, and
+ graduations.
+ The United States has three major buying seasons that impact the purchase
+ of technology: December holidays, Back-to-Business, and Back-to School.
+ Asian countries celebrate Chinese New Year and Golden Week.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Standard of living 
+\end_layout
+
+\begin_layout Standard
+The average salary in Switzerland is approximately $53,000 USD.
+ If you create a subscription service that costs $10 USD a month, you’re
+ asking the average Bangladeshi to give you 10% of their annual income.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Banking systems
+\end_layout
+
+\begin_layout Standard
+Some cultures make heavy use of credit and debit cards.
+ Developing countries tend to rely on cash, and, increasingly, mobile phones.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Literacy rates 
+\end_layout
+
+\begin_layout Standard
+If people in your target market can’t read, you will need to use pictures
+ or icons instead of words wherever possible.
+ There are many other examples.
+ If you think of any, please share them with your colleagues using the course
+ wiki.
+\end_layout
+
+\begin_layout Standard
+One important trap you must watch out for is the phenomenon of “same word,
+ different meaning” or “same meaning, different word.” If you’re not careful,
+ you can confuse or even offend your customers.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Pictorial representations
+\end_layout
+
+\begin_layout Standard
+Some cultures, such as Asian cultures, use pictures in their communications
+ more than others.
+ Pictures or icons can be one way to reduce the amount of text you have
+ to translate.
+ They are also useful for communicating to people in regions with low literacy
+ rates, such as Africa.
+ But you need to be careful when you use pictures.
+\end_layout
+
+\begin_layout Standard
+A good example is pictures or drawings of gestures.
+ They may be positive or benign in some cultures, but supremely insulting
+ in others.
+ Here are a couple of examples (note that we’re describing them vs.
+ showing them—our students are from all over the world!)
+\end_layout
+
+\begin_layout Subsubsection*
+Maps
+\end_layout
+
+\begin_layout Standard
+Showing the “wrong” map can embroil you in controversy.
+ Just ask any software company that has displayed a map one country thinks
+ is fine, but another nearby country considers a national affront.
+\end_layout
+
+\begin_layout Standard
+For example, you have several choices when showing a map of Israel:
+\end_layout
+
+\begin_layout Itemize
+The one with Judea and Samaria.
+ 
+\end_layout
+
+\begin_layout Itemize
+The one with the Palestinian Authority.
+ 
+\end_layout
+
+\begin_layout Itemize
+The one without the occupied territories.
+ 
+\end_layout
+
+\begin_layout Standard
+China considers Taiwan and Tibet part of China.
+ India has territory disputes with China, Pakistan, and Bangladesh.
+\end_layout
+
+\begin_layout Standard
+Your best bet is to show the map that is expected by the target audience
+ of your localized app.
+ Or better yet, avoid showing maps at all unless they’re directly relevant
+ to your product.
+\end_layout
+
+\begin_layout Subsubsection*
+Colors
+\end_layout
+
+\begin_layout Standard
+In the United States, white flowers are appropriate for weddings.
+ In China, they are appropriate for funerals; the Chinese adorn weddings
+ with red flowers.
+\end_layout
+
+\begin_layout Subsubsection*
+Images
+\end_layout
+
+\begin_layout Standard
+Symbolic use of photos of people, animals, things, or places may be lost
+ on some of your audience.
+ Some people may instantly recognize certain celebrities, political leaders,
+ musicians or athletes, but others may have never heard of them.
+ This gap may be generational as well.
+ Films and TV shows, even those with a worldwide audience, may be banned
+ in some countries.
+\end_layout
+
+\begin_layout Standard
+Be particularly careful of representations of women or animals, particularly
+ as mascots, characters, or in advertising.
+ Manga-like drawings of young girls in short skirts may be common in Asia,
+ but considered pedophilic in the West, or downright taboo in the Middle
+ East.
+ People in India consider cows and monkeys sacred.
+\end_layout
+
+\begin_layout Standard
+You also have to be careful about showing images that some cultures may
+ consider racist.
+ When Apple introduced emojis with different skin tones, they were trying
+ to be inclusive.
+ Asian Americans, however, who associate the color yellow with racial epithets,
+ found the new yellow colored emojis shocking and insensitive.
+\end_layout
+
+\begin_layout Subsubsection*
+Written or Verbal Expressions
+\end_layout
+
+\begin_layout Standard
+The same word or phrase can have completely different meanings in different
+ cultures, even if it’s in the same language.
+ It may be perfectly acceptable in one culture and not appropriate for polite
+ company in another.
+ This is particularly true of slang because it’s culture-specific and doesn’t
+ translate well.
+ And neither do cultural references.
+ What does the American expression “motherhood and apple pie” mean to someone
+ in China or rural India?
+\end_layout
+
+\begin_layout Subsection*
+Technological Differences
+\end_layout
+
+\begin_layout Standard
+Many technological differences stem from infrastructure, which may affect
+ which markets are appropriate for your software, as well as how your software
+ operates.
+ Some developing markets don’t have access to high speed internet, but do
+ have access to cell towers.
+ In these markets, many people use phones instead of PCs.
+ In some countries, “The Phone is the Internet.” Some countries, such as
+ South Korea, have advanced infrastructure that can support technology experienc
+es not yet accessible to other countries.
+ They are rapidly rolling out affordable one-gigabit per second connections
+ which are roughly 263 times faster than the world average and 100 times
+ faster than the average speed in the United States.
+ Other countries have unreliable infrastructures and even regular power
+ outages.
+\end_layout
+
+\begin_layout Standard
+Technological standards also vary, for example, voltage, AC frequency (50
+ Hz vs.
+ 60 Hz), and DVD region code.
+ Phones commonly used in one country may not work in other countries, as
+ cell technology may use different standards.
+\end_layout
+
+\begin_layout Subsection*
+Legal Differences
+\end_layout
+
+\begin_layout Standard
+Shipping software that violates local laws can result in sales of your software
+ being blocked and your company being sued.
+ Adhering to legal standards is called “compliance.” The European Union is
+ very strict about consumer privacy, for example.
+ Any software that deals with money and “Personally Identifiable Information”
+ (PII) must adhere to strict security standards, often government mandated.
+ In some European countries, this includes a requirement to store all data,
+ even for games, inside in that country’s physical boundaries.
+\end_layout
+
+\begin_layout Standard
+If your software involves content, such as video or music, you may have
+ to negotiate deals with content providers for each country, as licensing
+ and distribution laws vary.
+ You will also have to calculate and pay taxes differently on anything you
+ sell.
+\end_layout
+
+\begin_layout Standard
+As you build connections and form partnerships, you need to understand the
+ difference between cultural expectations, such as giving gifts, and violating
+ anti-bribery and corruption laws.
+ It’s always a good idea to have knowledgeable legal counsel.
+\end_layout
+
+\begin_layout Standard
+There are pitfalls in more directions that you can easily keep in your head.
+ So it behooves you to plan ahead for each and every market you hope to
+ target, consulting with people who know each culture well.
+\end_layout
+
+\begin_layout Section
+Flower App
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] We promise that we give you a few 
+\series bold
+examples
+\series default
+ of either applications that 
+\series bold
+didn't go quite so well
+\series default
+, or of 
+\series bold
+potential downfalls
+\series default
+ that we could see.
+ So this is a potential one as far as we know.
+ But it could definitely happen.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] So, let's assume there is, well I come up with this great idea, that I'm
+ creating a flower service that runs in Seattle.
+ And, basically, what it does it automatically sends through subscription
+ the appropriate flower to the customer that I pre-selected.
+ So it would send like red roses on Valentine's, buy lilies for Easter,
+ and like a nice flower, spring flower bouquet for Mother's Day and let's
+ say some poinsettias for Christmas, and whatever is in between.
+ And I could actually see that really this takes off, because it would be
+ an easy way, it would be like I sign up, I pay once and it takes off, right?
+ And takes off like wildfire.
+ I make a lot of money here in the Seattle area.
+ I go to San Francisco and L.A., and then on the east coast, and everywhere
+ it works brilliantly.
+ And then, a friend in Japan actually talks to me and says hey, how about
+ we expand this to Tokyo? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Hey, Bjorn, I'm wondering about Easter.
+ Is Easter as an holiday which is celebrated in Japan? And I'm wondering,
+ the in the white color has different meaning actually in Japan, it's also
+ symbolize death.
+ And also, I'm wondering about the date format, which is completely different
+ in Japan than that what we're using here in the US and, clearly I'm wondering
+ about the local vendor.
+ Are you shipping the flower from California to Japan, or are you using
+ a local vendor for the flowers? So please explain me.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Oh, my! You know this is stuff I obviously haven't considered.
+ Now I have sent hundreds of thousands of people in Tokyo Easter flowers,
+ a holiday that almost nobody celebrates.
+ And worst of all, I've sent them actually from the US, so they arrive like
+ three weeks later and they were completely done by then.
+ And, you're right, I didn't consider the date format because what I put
+ in as 6, 12 did not ship on June 12th, but it shipped on December 6, that's
+ Nicholas Day.
+ And then, a local vendor, that would have been smart, man.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Why didn't I think about this? Why didnt I take this class? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] [LAUGH] 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Okay, obviously, this was a made up scenario and we're role playing a
+ bit here.
+ But you get the idea.
+ 
+\series bold
+You need to watch out for these differences between markets
+\series default
+.
+ Otherwise, you will end up with a scenario like this, and you might lose
+ all the money that you made in your first rollout with the next rollout
+ by going into an international market.
+\end_layout
+
+\begin_layout Subsection
+Apps That Work Internationally, Apps That Don't
+\end_layout
+
+\begin_layout Standard
+Properly globalized software has a much better chance of being successful
+ in markets outside your own.
+ But as we like to say in the software business, if your feature works the
+ way it’s supposed to, no one will notice.
+ If it breaks, everyone will.
+\end_layout
+
+\begin_layout Standard
+Here’s a collection of true stories from your instructors’ collective experience
+s that illustrate what can go wrong, even when you’re careful.
+\end_layout
+
+\begin_layout Subsubsection*
+The Flowering of a Controversy
+\end_layout
+
+\begin_layout Standard
+When Microsoft first released Windows, it included games like Reversi and
+ Solitaire that would help people accustomed to working in MS-DOS learn
+ how to use a graphical user interface.
+ And when Microsoft introduced Minesweeper with Windows 3.1, it became a
+ mindless distraction on an international scale.
+ It was a silly, unsophisticated little game that Microsoft never imaged
+ would cause any kind of controversy, until it did.
+\end_layout
+
+\begin_layout Standard
+An American software engineer based in Redmond developed Minesweeper in
+ his spare time.
+ As his colleagues tried it out, it proved addictive and caught on.
+ One could argue whether it was a good idea to ship such a productivity
+ killer with Windows, but a little fun never hurt a product, right? This
+ made perfect sense to people born and raised in North America, who may
+ have heard or read about mines, but surely have never dealt with one in
+ real life.
+\end_layout
+
+\begin_layout Standard
+In some countries, however, landmines are a real problem, killing and maiming
+ people, including many children.
+ To people affected by mines, the game was appalling.
+ Taking this feedback to heart, Microsoft offered an alternative with Windows
+ Vista, called Flower Garden, a similar game with flowers instead of mines.
+ Lawyers and geopolitical experts helped Microsoft come up with a list of
+ countries where landmines were a sensitive issue and then, if you installed
+ Windows Vista in one of these locations, you got the more country-appropriate
+ game.
+ Problem solved, right?
+\end_layout
+
+\begin_layout Standard
+Except that it wasn’t.
+ As it turns out, even if users received Flower Garden by default, they
+ would still see the name Minesweeper with an icon that looked like a large,
+ prickly mine.
+ Plus, if they looked at Flower Garden’s help file, it still referred to
+ mines, not flowers.
+ (Note: In the second course in this series, we’ll teach you how to change
+ icons and file names based on what’s called a LocaleID.)
+\end_layout
+
+\begin_layout Standard
+So Microsoft addressed those issues too.
+ End of story, right? Nope.
+ Some groups didn’t want either game on their computers, including businesses
+ who wanted their productivity back.
+ Today, IT administrators can control what apps get installed on PCs in
+ their organization.
+\end_layout
+
+\begin_layout Subsubsection*
+Pictures, or It Didn’t Happen
+\end_layout
+
+\begin_layout Standard
+Before human factors specialists and usability testing made software design
+ more people-centric, technical people designed software.
+ In fact, Microsoft called us “Software Design Engineers.” This resulted
+ in a lot of software that was “too technical” for the average person.
+ When the Windows team embarked on Windows Vista, the leadership prioritized
+ the human experience.
+ The team designed a number of “end-to-end experiences” that took people
+ step-by-step through completing a task from beginning to end.
+\end_layout
+
+\begin_layout Standard
+One of these experiences involved photos.
+ When you plugged your camera or camera card into your PC, Windows automatically
+ detected it, asked if you wanted to download your photos, and then helped
+ you correct things like color, brightness, redeye, and cropping.
+ As a final step, you could share your photos online, or you could print
+ them.
+ Back then, since few people had photo-quality color printers, the Windows
+ business development team decided to broker deals with photo printing providers
+ so consumers would be able to send their photos directly from Windows Photo
+ Gallery, and the providers would make high quality prints and mail them
+ back.
+\end_layout
+
+\begin_layout Standard
+But as the team started making these deals with US providers, they realized
+ people in other countries would never order their photo prints from a US
+ provider.
+ To make this feature real, they would have to make deals in every single
+ country where Windows shipped.
+ This was clearly unworkable, and they abandoned the idea.
+\end_layout
+
+\begin_layout Subsubsection*
+Encouraging Efficiency, or Spying?
+\end_layout
+
+\begin_layout Standard
+For businesses that charge by the hour, such as consulting or law, the ability
+ to track how much time it takes to complete a document could be very useful,
+ or so the Microsoft Office team thought.
+ They created a feature that allowed users (or their managers) to track
+ how long an individual spends typing in a document.
+ Some individuals and businesses found this feature useful and convenient.
+ Those who didn’t need it simply ignored it.
+\end_layout
+
+\begin_layout Standard
+In Germany, however, the feature caused an uproar.
+ Workers felt Microsoft was helping management spy on them! Germany is heavily
+ unionized, and the unions vehemently objected to this perceived conspiracy.
+ It was particularly egregious, they felt, because the functionality could
+ be hidden, meaning managers could track the time spent in a document without
+ the worker’s knowledge.
+\end_layout
+
+\begin_layout Subsubsection*
+Choose Your Words Carefully
+\end_layout
+
+\begin_layout Standard
+It is impossible to anticipate every small detail that could potentially
+ trip you up and cause problems for your customers.
+ But it is good to be as prepared and as thorough as possible, because even
+ a single word or character can make your company a target.
+ The following is a list of real incidents from Microsoft’s experience:
+\end_layout
+
+\begin_layout Itemize
+The time someone typed a German name into an English-language version of
+ Microsoft Word and it auto-corrected to a very bad word.
+ 
+\end_layout
+
+\begin_layout Itemize
+The time the Spanish version of Windows used the word Hembra, which means
+ “woman” but “bitch” in Nicaragua.
+ 
+\end_layout
+
+\begin_layout Itemize
+The time Microsoft Outlook acknowledged April 30 as the queen's birthday
+ in Uruguay, a proud republic, offending its government.
+ 
+\end_layout
+
+\begin_layout Itemize
+The time Windows 95’s time zone map of the world did not display the disputed
+ region as part of a certain country, which then banned the operating system.
+ 
+\end_layout
+
+\begin_layout Itemize
+The time Microsoft had to withdraw the game Age of Empires 2 from Saudi
+ Arabia because it showed Muslim armies converting churches into mosques,
+ offending Saudi authorities.
+ 
+\end_layout
+
+\begin_layout Itemize
+The time Microsoft accidentally reversed the Korean flag, upsetting the
+ Korean government.
+ 
+\end_layout
+
+\begin_layout Standard
+And that’s just the tip of the iceberg.
+ If you know of other great anecdotes about software products that inadvertently
+ courted controversy because of cross-cultural snafus, please add them to
+ the course Wiki.
+\end_layout
+
+\begin_layout Section
+Marketing and Public Relation (PR)
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Nadine
+\color inherit
+] Early in my Microsoft career I took some time off to get my MBA at Stanford.
+ And I remember coming back, during the summer, to a meeting where there
+ was a senior technical executive.
+ And he said to me, oh, you're getting your MBA? Don't worry.
+ We won't hold that against you.
+ 
+\end_layout
+
+\begin_layout Standard
+So I'd like to take a moment to talk about marketing and PR.
+ Yeah, this is a computer science course.
+ You can say Nadine, I'm a technical program manager, I'm a coder, I'm not
+ a marketing and PR person.
+ Why are you bothering me with this? Well, this is a computer science course
+ and a big theme of this course is planning ahead.
+ And this includes designing and writing the kind of software that your
+ marketing people can convince people to buy.
+ Plus, your PR people will be the ones who put you in front of the press,
+ analysts, your partners and audiences who are interested in your software.
+ And you have to say positive, compelling things that make people believe
+ in what you're doing.
+ So marketing and PR is important to you as a technical person.
+ And what does this have to do with internationalization? Well, everything.
+ And let me explain why.
+ 
+\end_layout
+
+\begin_layout Standard
+I'm gonna give you a scenario, based on something that actually happened.
+ Now let's say you work for a gaming company and you're developing this
+ awesome hand to hand combat game and it's in the tradition of great kung
+ fu movies.
+ Now you're making it for a partner.
+ A very big and important partner.
+ Which is a great opportunity for your fledgling company.
+ Well this is an epic game, so the soundtrack of course has to be just epic.
+ A friend plays you an awesome sound of people chanting in unison.
+ Wow.
+ It's rhythmic, it's melodious, it's harmonious.
+ It's a perfect fit for this game's feel and the background of it just makes
+ everything come so alive.
+ 
+\end_layout
+
+\begin_layout Standard
+So you ask the team's composer to add this sound to the sound effects, to
+ the soundtrack of the game.
+ But you want to get a couple more opinions, so you take it by a few more
+ of the people around the office, and one of your colleagues is a Muslim
+ and he speaks Arabic and he says, this chant, it's from the Koran.
+ And he starts getting really upset.
+ He says, how can you do this? How can you include something so meaningful
+ to Muslims in the soundtrack of a computer game? That's really offensive.
+ 
+\end_layout
+
+\begin_layout Standard
+Well, you're faced with the situation, what would you do? Well on the one
+ hand, you could immediately drop the idea of using this sound and find
+ something else.
+ And on the other, you could tell your colleague, hey, stop being so politically
+ correct.
+ And we're gonna use this sound because it's just awesome.
+ Of course, that choice seems kind of obvious, doesn't it? 
+\end_layout
+
+\begin_layout Standard
+Well, let me tell you what the real company and the real scenario in question
+ did with this situation.
+ They went ahead and they shipped the soundtrack with the chant, but only
+ in the United States, because they said nobody will notice, and that seemed
+ to work fine, until the Saudi government called.
+ That's right, the government of Saudi Arabia, they did notice, and they
+ weren't very happy.
+ So the company ended up pulling the game worldwide, and someone high up
+ in the company had to go in front of the press, with the help of the PR
+ people and explain this.
+ And they had to apologize to everyone who was offended in order to save
+ the company's reputation.
+ 
+\end_layout
+
+\begin_layout Standard
+So let's check back a little bit.
+ How did this happen? In the real story the game in question was made by
+ a company in Japan.
+ Now if you're familiar with Japan, you know that millions of people in
+ Japan chant.
+ And they're mostly Buddhists who recite sutras that derive from ancient
+ languages.
+ So the game developer who found it, he thought it was really cool, but
+ he didn't go check to see where it came from.
+ This particular chant.
+ He didn't know it was from the Koran, how would he? He doesn't speak Arabic.
+ For all he knew was Sanskrit like the Buddhist chants in Japan, and since
+ he liked it, he said hey let's use it.
+ Well the team developing the game, not the marketing or the peer people,
+ made this decision to include this sound.
+ And the game became something the marketing team could never sell, and
+ the PR team had to step in and clean things up.
+ 
+\end_layout
+
+\begin_layout Standard
+So the 
+\series bold
+moral of the story is, decisions that you make as product developers have
+ a tremendous impact, way beyond writing code.
+ So raise your awareness, and plan ahead
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Marketing and PR
+\end_layout
+
+\begin_layout Standard
+Why is there a unit on Marketing and PR in a computer science course? We’ve
+ included this discussion because how you design and write your software
+ for international markets can have consequences (sometimes very big consequence
+s) for marketing and PR.
+\end_layout
+
+\begin_layout Standard
+For many years, marketing efforts started toward the end of the software
+ development cycle.
+ Before agile methodology gained favor, the “
+\series bold
+Waterfall
+\series default
+” approach to developing software was dominant.
+ 
+\series bold
+Software teams designed software, developed it, tested it, and shipped it
+\series default
+.
+ As the release-to-market (RTM) date approached and the software stabilized,
+ 
+\series bold
+marketing teams constructed marketing campaigns and PR teams got ready to
+ generate buzz for the product’s launch
+\series default
+.
+ Once the product launched, 
+\series bold
+sales teams got busy
+\series default
+ and the 
+\series bold
+software team started working on the next version of the software, beginning
+ once more at the design phase
+\series default
+.
+ The next version might ship a year or more later.
+ The 
+\series bold
+marketing, PR, and sales teams continued to work on the product just released,
+ until the next release
+\series default
+ drew near and they had to shift their focus.
+\end_layout
+
+\begin_layout Standard
+In today’s age of rapid, agile development, and continuous updates for cloud-bas
+ed software, timelines are compressed.
+ Marketing and PR also have to be rapid, agile, and continuous.
+ If you don’t want the teams tasked with convincing people to buy your software
+ running around like crazy people with their shorts on fire, you need to
+ put yourself in their shoes on a consistent and constant basis.
+\end_layout
+
+\begin_layout Standard
+There’s an American saying, “
+\series bold
+Never believe your own press
+\series default
+,” advice apparently given to movie stars because studios paid reporters
+ to write nice things about them.
+ “
+\series bold
+Don’t think too much of yourself
+\series default
+,” it implies.
+ When you promote software, you have to 
+\series bold
+find the right balance between telling the world how great it is and not
+ appearing arrogant
+\series default
+.
+ Shipping software that breaks when people outside your home market try
+ to use it, or that includes features or graphics insensitive to some cultures,
+ is a sure way to earn the “arrogant” label.
+ What’s more arrogant than only caring about people who do things and view
+ things the way you do? Read up on the missteps Microsoft made during its
+ earliest forays into the Chinese market in the 1980’s for a lesson on how
+ cultural misunderstanding can lead to business friction.
+\end_layout
+
+\begin_layout Standard
+These days, once an ugly incident, embarrassing quote, or bad review gets
+ on the Internet, it pretty much never goes away.
+ It doesn’t matter if the reports are taken out of context or you plead
+ ignorance.
+ If you do, you just get labeled “out of touch” or “ignorant.” So if your
+ software is unimpressive to someone—or worse yet, offensive—be prepared
+ for the possibility that they will tell everyone they can, and that those
+ people will tell all their friends.
+ 
+\series bold
+You will then have to explain yourself, fix the problem, and hope you can
+ recover
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Here’s a great exercise for putting on your marketing and PR shoes: as part
+ of your planning process, 
+\series bold
+write your own press release, highlighting your software’s strongest selling
+ points
+\series default
+.
+ Below is a form to get you started.
+ You can replace the generic words in bold with words that match your project.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Today Team Name announced the availability of Software Name, a type of software
+ that gives the target customer a powerful, inexpensive way to accomplish
+ a task.
+\end_layout
+
+\begin_layout Enumerate-Resume
+“We are thrilled to release this software to market,” said Your Name, your
+ title, your company or team name.
+ “We believe it addresses a gap in the market that will lead to big impact.”
+\end_layout
+
+\begin_layout Enumerate-Resume
+Team Name has beta tested the product with a number of customers in specific
+ international markets.
+\end_layout
+
+\begin_layout Enumerate-Resume
+“Initial customer feedback has been outstanding,” said Your Name.
+ Customers have told us positive things about their experiences using the
+ software.
+ Customers living in certain countries find Software Name particularly useful,
+ because it addresses a need specific to their market that no one else has
+ been able to address as well before now.”
+\end_layout
+
+\begin_layout Enumerate-Resume
+Software Name includes a number of features that help users do a list of
+ awesome things that will make everyone want to use the software.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Software Name is available today in list of countries, in list of languages
+ language editions via where people can get it.
+ It sells for price.
+\end_layout
+
+\begin_layout Standard
+The above is a very simple example of a product announcement.
+ The key points are to identify what your software does, who it is for,
+ and what they will be able to accomplish using it.
+ Now think about the list of markets you put into your press release:
+\end_layout
+
+\begin_layout Itemize
+Does the gap that your software addresses exist in all of your target markets?
+ 
+\end_layout
+
+\begin_layout Itemize
+Will your approach to addressing that gap be understandable and appealing
+ to people in all of those markets, who come from different cultures and
+ have different tastes? 
+\end_layout
+
+\begin_layout Itemize
+Do people living in your target markets have access to the technology necessary
+ to run your software? Have you thought carefully about what constitutes
+ a “great experience?” The experience needs to remain as great for someone
+ who lives in one of your target markets and tries to interact with the
+ experience in their own language.
+ 
+\end_layout
+
+\begin_layout Itemize
+Are you certain that people in your target market have access to the distributio
+n channel you have selected? 
+\end_layout
+
+\begin_layout Itemize
+Are you certain that the price you wish to charge would be considered reasonable
+ in all of your target markets? 
+\end_layout
+
+\begin_layout Standard
+As a further exercise, write your own product review, which can serve as
+ “an inspiration to live up to” for design, development, quality assurance,
+ and marketing.
+ As you describe your cool and awesome features, ask yourself first if it
+ will require additional effort to implement the feature in markets outside
+ your own, and whether doing so is even feasible.
+ You also need to ask whether people outside your home market will find
+ the features just as cool and awesome as you do—and for the same reasons.
+ Other cultures may find some features you think are great not only useless,
+ but downright annoying or offensive.
+ The real-life examples in the Flower App unit illustrate this possibility.
+\end_layout
+
+\begin_layout Standard
+The Press Release no one wants to write, and the interview you never want
+ to do, is the one in which you have to accept responsibility for a problem
+ you could have prevented through appropriate awareness, design, and execution.
+ It’s not just about alienating customers.
+ Imagine having to apologize to an entire country—or an entire religion—for
+ something your software does or does not do properly.
+\end_layout
+
+\begin_layout Section
+Kicking Off Your Software Project
+\end_layout
+
+\begin_layout Standard
+It’s time to start planning the software project you will design and build
+ as part of this course and the next two.
+ The first step is to come up with an idea for what your software will do.
+ Your idea will invariably evolve into a better one as the course progresses
+ and you learn additional concepts, so give it room to grow.
+ Some of you may already know what you want to build.
+ The rest of you may be thinking, “How am I going to come up with a workable
+ idea out of thin air?”
+\end_layout
+
+\begin_layout Standard
+To make this a little less daunting, we’ll give you some basic guidelines:
+\end_layout
+
+\begin_layout Enumerate
+We suggest writing an app from scratch.
+ Some of you may be taking the course so you can learn how to make existing
+ software world-ready, but if it has a lot of code, this approach will be
+ quite challenging.
+ Better to learn by writing something new and applying what you learn to
+ your other project later.
+ 
+\end_layout
+
+\begin_layout Enumerate
+We suggest writing something simple that includes these basic features:
+ 
+\end_layout
+
+\begin_layout Itemize
+It requires inputting text, not just clicking on or touching areas of the
+ device screen.
+ 
+\end_layout
+
+\begin_layout Itemize
+It displays the text the user inputs.
+ 
+\end_layout
+
+\begin_layout Itemize
+It allows the user to do at least rudimentary text editing.
+ 
+\end_layout
+
+\begin_layout Itemize
+It uses UI elements that translation will affect, such as menus, dialog
+ boxes, or buttons.
+ It makes adjustments based on country or language, like the formatting
+ of numbers, dates or currencies.
+ Refer back to Module One Unit Two for a list of market differences your
+ feature set may need to accommodate.
+ 
+\end_layout
+
+\begin_layout Enumerate-Resume
+If you want to write an app but aren’t sure what kind, check out the categories
+ in your favorite app store.
+ Here are the categories in the Windows Store (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Categories-in-the"
+
+\end_inset
+
+) : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Books & Reference
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Government & Politics
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Music
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Security
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Business
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Health & Fitness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Navigation & Maps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Shopping
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Developer Tools
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kids & Family
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+News & Weather
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Social
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Education
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lifestyle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Personal Finance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sports
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entertainment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Medical
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photo & Video
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Travel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Food & Dining
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multimedia Design
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Productivity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Utilities & Tools 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Categories-in-the"
+
+\end_inset
+
+Categories in the Windows Store.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+We want you to have fun, but to also keep in mind what may be offensive
+ to someone else.
+ At the same time, it’s a free market, so we won’t put restrictions on what
+ you write.
+ As part of Module Two of this course, you will need prepare a “PR Plan”
+ to manage or appease anyone who might not appreciate what your software
+ does, for whatever reason.
+ The peers grading your homework will provide a rehearsal in dealing with
+ the market.
+ 
+\end_layout
+
+\begin_layout Enumerate-Resume
+Lastly, some of you may come up with an idea so awesome you want to write
+ the software and actually sell it.
+ We’re not lawyers, but keep in mind that edX is a more or less public forum
+ and does not offer any Intellectual Property protection.
+ If you’re concerned someone may steal your awesome idea, don’t share it
+ here.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Our App Idea: Flowers As A Service
+\end_layout
+
+\begin_layout Standard
+Here’s our idea: a shopping app that delivers flowers.
+ It’s a very simple example, designed to illustrate the concepts of this
+ course.
+\end_layout
+
+\begin_layout Subsection*
+Target markets
+\end_layout
+
+\begin_layout Standard
+We are starting our business in Seattle, Washington in the United States.
+ If we are successful, we will expand to San Francisco, Los Angeles, New
+ York City, and beyond.
+\end_layout
+
+\begin_layout Subsection*
+Type of software
+\end_layout
+
+\begin_layout Standard
+AutoFlowr is an annual subscription service, managed via a mobile phone
+ app, that automatically sends flowers to special people on holidays throughout
+ the year:
+\end_layout
+
+\begin_layout Itemize
+Red roses for Valentine’s Day.
+ 
+\end_layout
+
+\begin_layout Itemize
+White lilies for Easter.
+ 
+\end_layout
+
+\begin_layout Itemize
+Spring bouquet for Mother’s Day.
+ 
+\end_layout
+
+\begin_layout Itemize
+Poinsettias for Christmas.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Target audience
+\end_layout
+
+\begin_layout Standard
+Our app will appeal to all kinds of people:
+\end_layout
+
+\begin_layout Itemize
+Thoughtful, kind consumers who enjoy spreading happiness to the people around
+ them.
+ 
+\end_layout
+
+\begin_layout Itemize
+Businesses who want to strengthen relationships with important clients.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Target platform(s)
+\end_layout
+
+\begin_layout Itemize
+iPhone / iPad 
+\end_layout
+
+\begin_layout Itemize
+Android phones 
+\end_layout
+
+\begin_layout Itemize
+Windows phones 
+\end_layout
+
+\begin_layout Subsection*
+The customer experience
+\end_layout
+
+\begin_layout Standard
+Getting started requires only a few steps.
+\end_layout
+
+\begin_layout Itemize
+Customers download our mobile phone app and create an account.
+ 
+\end_layout
+
+\begin_layout Itemize
+They create a list of recipients and the addresses where we will deliver
+ flowers.
+ 
+\end_layout
+
+\begin_layout Itemize
+They give us their credit card or PayPal information for billing purposes.
+ 
+\end_layout
+
+\begin_layout Standard
+At this point, customers can let the service take care of the rest.
+ If they want to personalize the flower deliveries, however, they can do
+ the following via the mobile app:
+\end_layout
+
+\begin_layout Itemize
+Add or subtract holidays from the delivery schedule.
+ 
+\end_layout
+
+\begin_layout Itemize
+Add delivery dates: birthdays, anniversaries, annual remembrances.
+ 
+\end_layout
+
+\begin_layout Itemize
+Add one-time deliveries to say “Thank You,” “I messed up,” “Congratulations,”
+ “I’m sorry for your loss,” “Get well soon,” or “I like you.” 
+\end_layout
+
+\begin_layout Itemize
+Select which flowers get delivered to each person on each occasion.
+ 
+\end_layout
+
+\begin_layout Itemize
+Choose from a variety of default messages to include on a card that gets
+ sent with the flowers or write their own messages.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Technical
+\end_layout
+
+\begin_layout Standard
+For our first release, we will keep the app relatively simple.
+ It will:
+\end_layout
+
+\begin_layout Itemize
+Use social media sign-in, supporting Facebook, Google+, Twitter, or Microsoft
+ Account.
+ 
+\end_layout
+
+\begin_layout Itemize
+Allow customers to enter their recipient list by hand, select individuals
+ from their phone’s contact list, or select contacts from their social media
+ accounts.
+ 
+\end_layout
+
+\begin_layout Itemize
+Download addresses for the recipient list from contact information if customers
+ connect their AutoFlowr to their phone’s contact list or a social media
+ account.
+ If a specific contact does not include an address, the app will ask for
+ one.
+ 
+\end_layout
+
+\begin_layout Itemize
+Select florists to deliver the flowers based on proximity to the delivery
+ address.
+ The app will put pushpins on a map so customers can look up the florists
+ we assign.
+ 
+\end_layout
+
+\begin_layout Itemize
+Give customers the option to add reminders for who is getting which flowers
+ on which occasion to their calendar.
+ 
+\end_layout
+
+\begin_layout Itemize
+Store all customer information in the cloud using Amazon Web Services or
+ Microsoft Azure.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Distribution and marketing
+\end_layout
+
+\begin_layout Standard
+We will distribute the app via the online app stores for each platform we’re
+ targeting.
+\end_layout
+
+\begin_layout Standard
+Our two main marketing vehicles are as follows:
+\end_layout
+
+\begin_layout Itemize
+Social media, e.g., a Facebook page and Twitter feeds.
+ 
+\end_layout
+
+\begin_layout Itemize
+Partnerships with florists.
+ We will ask them to promote our app in their stores and on their websites.
+\end_layout
+
+\begin_layout Section
+What Could Possibly Go Wrong?
+\end_layout
+
+\begin_layout Standard
+If you watched Bjorn pitch our app in the Flower App unit, you know that
+ our flower app proposal has some shortcomings.
+ Did you notice any potential problems in the written description that the
+ video did not cover? In this unit, we’ll explore how we weren’t thinking.
+\end_layout
+
+\begin_layout Standard
+Let’s say we launch our app in Seattle, where it is so successful that we’re
+ also able to launch our service in San Francisco, Los Angeles, and New
+ York City.
+ Now we want to go international.
+ So we send our write-up to a Venture Capitalist friend who specializes
+ in global startups in hopes that she will fund our expansion to Asia and
+ Europe.
+ She sends our proposal back with comments.
+\end_layout
+
+\begin_layout Quote
+Dear Bjorn,
+\end_layout
+
+\begin_layout Quote
+Congratulations on the success of AutoFlowr in the United States.
+ I’ve reviewed your proposal and tested your app.
+ While I see the potential, I’m not sure this is something I can get behind.
+ Comments are below:
+\end_layout
+
+\begin_layout Subsection*
+Target markets
+\end_layout
+
+\begin_layout Standard
+We are starting our business in Seattle, Washington in the United States.
+ If we are successful, we will expand to San Francisco, Los Angeles, New
+ York City, and beyond.
+\end_layout
+
+\begin_layout Quote
+I get your logic.
+ You wanted to see if your service would take off in an area you know before
+ expanding.
+ Unfortunately, because you chose that strategy, you now have some serious
+ challenges ahead if you want to take your service into other countries.
+ You’ll have to make a lot of changes to your business model and app if
+ you want to be successful in Japan, Israel, or Germany just for starters.
+\end_layout
+
+\begin_layout Subsection*
+Type of software
+\end_layout
+
+\begin_layout Standard
+AutoFlowr is an annual subscription service, managed via a mobile phone
+ app that automatically sends flowers to special people on holidays throughout
+ the year:
+\end_layout
+
+\begin_layout Itemize
+Red roses for Valentine’s Day 
+\end_layout
+
+\begin_layout Itemize
+White lilies for Easter 
+\end_layout
+
+\begin_layout Itemize
+Spring bouquet for Mother’s Day 
+\end_layout
+
+\begin_layout Itemize
+Poinsettias for Christmas 
+\end_layout
+
+\begin_layout Quote
+Here’s the first issue.
+ “AutoFlowr” is a name that clearly summarizes what the service does—in
+ English.
+ Based on your success, it seems to resonate in the United States.
+ My guess is that it won’t resonate in other countries, however.
+ Let’s start with Japan.
+ Although the Japanese often incorporate English words when there is no
+ Japanese equivalent, they do have a word for “flower,” which is “hana.”
+ “Auto” pronounced by a Japanese person is “oto,” which means “noise” or
+ “man.” “Flower” pronounced by a Japanese person is “fu-ra-wa” or “fu-ro-wa”.
+ “Furo” in Japanese means bath.
+ So your app title could potentially be heard as “noisy bath” or “male bath,”
+ neither of which conjure up images of holiday flowers.
+ Do you see where I’m going with this?
+\end_layout
+
+\begin_layout Quote
+Speaking of holidays, while Valentine’s day is huge in Japan, fewer than
+ 1% of Japanese identify as Christians.
+ So Easter isn’t a big flower-giving day there.
+ Not only that, sending someone white flowers could be shocking, as white
+ signifies death.
+ It’s better to send white flowers to funerals.
+\end_layout
+
+\begin_layout Subsection*
+Target audience
+\end_layout
+
+\begin_layout Standard
+Our app will appeal to all kinds of people:
+\end_layout
+
+\begin_layout Itemize
+Thoughtful, kind consumers who enjoy spreading happiness to the people around
+ them 
+\end_layout
+
+\begin_layout Itemize
+Businesses who want to strengthen relationships with important clients 
+\end_layout
+
+\begin_layout Quote
+I see that you’re targeting your audience by “psychographics” instead of
+ “demographics.” That‘s an interesting strategy, as there are thoughtful
+ people all over the world.
+ However, when people in some cultures want to send a thoughtful gift, they
+ don’t necessarily think of flowers first.
+ The Japanese consider fruit, which is expensive in Japan, an impressive
+ gift.
+ The French might would feel the same about pastries or high-end chocolates.
+ In France, patisseries outnumber florists.
+ Have you considered expanding your offering beyond flowers?
+\end_layout
+
+\begin_layout Subsection*
+Target platform(s)
+\end_layout
+
+\begin_layout Itemize
+iPhone / iPad 
+\end_layout
+
+\begin_layout Itemize
+Android phones 
+\end_layout
+
+\begin_layout Itemize
+Windows phones 
+\end_layout
+
+\begin_layout Quote
+Going cross-platform is a great idea.
+ Just make sure you are familiar with what support each platform offers
+ for globalized apps.
+ They’re not necessarily consistent.
+ I hope you have some good coders who know how to manage this.
+\end_layout
+
+\begin_layout Subsection*
+The customer experience
+\end_layout
+
+\begin_layout Itemize
+Getting started requires only a few steps:
+\end_layout
+
+\begin_layout Itemize
+Customers download our mobile phone app and create an account.
+ 
+\end_layout
+
+\begin_layout Itemize
+They create a list of recipients and the addresses where we will deliver
+ flowers.
+ 
+\end_layout
+
+\begin_layout Itemize
+They give us their credit card or PayPal information for billing purposes.
+ 
+\end_layout
+
+\begin_layout Quote
+The first red flag I see here is that address formats vary by country.
+ Your app, as far as I can tell, can only accept American addresses.
+ You’ll need to update that code.
+\end_layout
+
+\begin_layout Quote
+Also, whereas a lot of people in the United States use credit cards or PayPal,
+ people in other countries primarily use debit cards or mobile phones to
+ make purchases.
+ Some countries still rely on cash, just something to keep in mind.
+\end_layout
+
+\begin_layout Standard
+At this point, customers can let the service take care of the rest.
+ If they want to personalize the flower deliveries, however, they can do
+ the following via the mobile app:
+\end_layout
+
+\begin_layout Itemize
+Add or subtract holidays from the delivery schedule.
+ 
+\end_layout
+
+\begin_layout Itemize
+Add delivery dates: birthdays, anniversaries, annual remembrances.
+ 
+\end_layout
+
+\begin_layout Itemize
+Add one-time deliveries to say “Thank You,” “I messed up,” “Congratulations,”
+ “I’m sorry for your loss,” “Get well soon,” or “I like you.” 
+\end_layout
+
+\begin_layout Itemize
+Select which flowers get delivered to each person on each occasion.
+ 
+\end_layout
+
+\begin_layout Itemize
+Choose from a variety of default messages to include on a card that is sent
+ with the flowers or write their own messages.
+\end_layout
+
+\begin_layout Quote
+Personalization is always good.
+ Customers like options.
+ But you will need to change your default list for different countries as
+ holidays vary widely.
+ Japan celebrates Respect for the Aged Day, and a number of countries still
+ have monarchs, whose birthdays are national holidays.
+ Asia celebrates Chinese New Year and Golden Week.
+ You should also think about which religious holidays to show in which countries.
+ It probably won’t make much sense to have Easter, Christmas, and Palm Sunday
+ on the default list for Israel.
+ Speaking of which, Jewish holidays begin at sunset, so you’ll have to make
+ it clear deliveries will occur the day BEFORE the celebration date listed
+ in many calendars.
+\end_layout
+
+\begin_layout Quote
+As for default messages, don’t just translate the ones you came up with
+ for the United States.
+ Have someone who was born and raised in your target market write new ones
+ for you to make sure they’re appropriate.
+\end_layout
+
+\begin_layout Quote
+Moreover, I’m concerned using default messages goes against the purpose
+ of your app.
+ The app is supposed to give the impression the giver is thoughtful, when
+ in fact, using default messages tells the recipient the app was more thoughtful
+ than the flower senders.
+ In some cultures, finding out you are on an automated list it could be
+ hurtful and damage a relationship rather than strengthen it.
+\end_layout
+
+\begin_layout Subsection*
+Technical
+\end_layout
+
+\begin_layout Quote
+For our first release, we will keep the app relatively simple.
+ It will:
+\end_layout
+
+\begin_layout Itemize
+Use social media sign-in, supporting Facebook, Google+, Twitter, or Microsoft
+ Account.
+ 
+\end_layout
+
+\begin_layout Itemize
+Allow customers to enter their recipient list by hand, select individuals
+ from their phone’s contact list, or select contacts from their social media
+ accounts.
+ 
+\end_layout
+
+\begin_layout Itemize
+Download addresses for the recipient list from contact information if customers
+ connect their AutoFlowr to their phone’s contact list or a social media
+ account.
+ If a specific contact does not include an address, the app will ask for
+ one.
+ 
+\end_layout
+
+\begin_layout Itemize
+Select florists to deliver the flowers based on proximity to the delivery
+ address.
+ The app will put pushpins on a map so customers can look up the florists
+ we assign.
+ 
+\end_layout
+
+\begin_layout Itemize
+Give customers the option to add reminders for who is getting which flowers
+ on which occasion to their calendar.
+ 
+\end_layout
+
+\begin_layout Itemize
+Store all customer information in the cloud using Amazon Web Services or
+ Microsoft Azure.
+ 
+\end_layout
+
+\begin_layout Quote
+A couple of items from your technical list concern me:
+\end_layout
+
+\begin_layout Quote
+Have you looked into how flower distribution currently works in the countries
+ you’re planning to target? Do you even know if local florists would be
+ willing to work with you? Are you sure they have the technology to receive
+ your orders, or get electronic payments? 
+\end_layout
+
+\begin_layout Quote
+If you’re going to use the cloud, keep in mind that some countries, like
+ Germany, insist that any sensitive information on its citizens be physically
+ stored within the boundaries of their country.
+ There are a lot of legal considerations.
+ Have you thought about tax laws?
+\end_layout
+
+\begin_layout Subsection*
+Distribution and marketing
+\end_layout
+
+\begin_layout Standard
+We will distribute the app via the online app stores for each platform we’re
+ targeting.
+\end_layout
+
+\begin_layout Standard
+Our two main marketing vehicles are as follows:
+\end_layout
+
+\begin_layout Itemize
+Social media, e.g., a Facebook page and Twitter feeds.
+ 
+\end_layout
+
+\begin_layout Itemize
+Partnerships with florists.
+ We will ask them to promote our app in their stores and on their websites.
+ 
+\end_layout
+
+\begin_layout Quote
+Online distribution is great.
+ It’s relatively straightforward.
+ It’s also easy to do a search and discover that you already have a number
+ of competitors in local markets.
+ Perhaps customers would rather sign-up with a local company.
+ You should do more research on this.
+\end_layout
+
+\begin_layout Quote
+As for social media, don’t forget that some of the largest social media
+ sites in the world don’t even exist in the United States, for example,
+ China’s Qzone and Russia’s vkontakte.
+\end_layout
+
+\begin_layout Quote
+Working with florists is an interesting idea, but you will have to carefully
+ understand their customers to forge strong partnerships.
+ Your app is best for people who don’t to go to flower shops in person.
+ The personalized attention people get at a florist is a radically different
+ experience than setting up an automated list, and it’s probably different
+ country-by-country.
+ The people who take the time to go to a florist may not be the same people
+ who want to use your App.
+ Moreover, there’s nothing to stop a local florist from offering a similar
+ program to people who visit their shop.
+ It just takes a one-time visit to set everything up, particularly if the
+ list of recipients is short, and people can actually see the flower choices.
+\end_layout
+
+\begin_layout Quote
+Lastly, how can you distinguish yourself in the market from the stalwarts
+ who are your competition? How else can you get word out about it so it
+ takes off in the Zeitgeist like Uber or Groupon? Like AutoFlowr, both of
+ those apps deal in IRL purchases from your app.
+ You’re an update of flower delivery services that have existed for at least
+ a century.
+ Uber allowed you to easily and quickly summon a car without having to hail
+ one on the street.
+ Groupon provided a searchable interface that was far superior to sorting
+ through coupons.
+ So, other than automating things so you can forget about the people you
+ want to know you care about so deeply, what else do you bring to the table
+ that will make you a household name?
+\end_layout
+
+\begin_layout Section
+Assignments
+\end_layout
+
+\begin_layout Subsection
+Assignment Part One:
+\end_layout
+
+\begin_layout Itemize
+Write a one- to two-page summary description of the software you’d like
+ to build.
+ If you wish, you can use the summary description of the Flower App from
+ Unit Eight as a framework, or the press release form in Unit Six.
+\end_layout
+
+\begin_layout Itemize
+There is no need to write a full business proposal, product plan, or technical
+ specification.
+ Subsequent units will take you through those exercises.
+ Our description is approximately 500 words long.
+ Your maximum is 750 words.
+\end_layout
+
+\begin_layout Itemize
+Publish the description in the discussion section.
+\end_layout
+
+\begin_layout Subsection
+Assignment Part Two:
+\end_layout
+
+\begin_layout Itemize
+Review the summary descriptions submitted by two of your course-mates.
+ Point out at least one issue their software may encounter in markets outside
+ theirs.
+ Please be specific and give examples.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Module 2
+\end_layout
+
+\begin_layout Section
+World Ready Process
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah, let's talk about a better way of making your software world ready.
+ First of all get a commitment up front from everyone on the team, which
+ might be only you, to do their part to globalize the software.
+ That is, 
+\series bold
+ensure that everything, features, code, documentation, is designed from
+ the ground up to work around the world
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+ I would like to add to this.
+ Everyone in the team, I mean, if it's a one team, if you are the only person
+ in the team, that's okay.
+ But many times 
+\series bold
+you have other people on the team
+\series default
+.
+ Can be 
+\series bold
+designer
+\series default
+, 
+\series bold
+architect
+\series default
+, 
+\series bold
+software
+\series default
+ 
+\series bold
+engineer
+\series default
+, 
+\series bold
+writers
+\series default
+, 
+\series bold
+finance
+\series default
+, whatever, everyone needs to understand that this product can be globalized.
+ And be sure that everyone is aligned with you in globalizing the product
+ itself.
+ 
+\end_layout
+
+\begin_layout Standard
+Make sure your
+\series bold
+ design in your code are locale aware
+\series default
+, that they account for 
+\series bold
+differences in language rules, country or region, and culture
+\series default
+.
+ Locale-based information includes 
+\series bold
+keyboard
+\series default
+ 
+\series bold
+layout
+\series default
+, and formatting for 
+\series bold
+date
+\series default
+, 
+\series bold
+time
+\series default
+, 
+\series bold
+numbers
+\series default
+, 
+\series bold
+calendars
+\series default
+, and 
+\series bold
+currency
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yes, Daniel, locale awareness is something that gets often ignored in
+ software.
+ For example in Switzerland you're not only using a different keyboard layout
+ to enter 
+\series bold
+German
+\series default
+ language, but you also have different spelling rules.
+ Like the very common word for street, [FOREIGN] in Germany is spelled with
+ a extended character, the sharp s, and in 
+\series bold
+Switzerland
+\series default
+ it's spelled with two s's.
+ And then language rules in general, like, even if you looks outside of,
+ like, differences between one language to the other, there are like rules
+ somehow to create plural forms of words.
+ In 
+\series bold
+English
+\series default
+ you just add an S to the end, that doesn't work in any of the other languages.
+ 
+\end_layout
+
+\begin_layout Standard
+So in addition to 
+\series bold
+being locale aware
+\series default
+, you also need to design your features and your code to be localizable.
+ Meaning 
+\series bold
+you can translate the user interface and customize features for specific
+ locales without having to change your source code
+\series default
+.
+ Most developers just 
+\series bold
+put their UI in the code
+\series default
+.
+ 
+\series bold
+That doesn't work
+\series default
+.
+ You need to 
+\series bold
+move it into resource files
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I would like to add to that.
+ We spoke a little about 
+\series bold
+one binary for the product
+\series default
+, and this is include also this resource externalization.
+ So we need to take all this stream and externalize them to resource files,
+ but it's all not on this stream, can be other other things.
+ We can think about images, we can think about calls, we can read font,
+ and other resources that might be different from one market to another
+ market, from one language to another language.
+ Now, you need also to enable, you code to handle input and display and
+ processing by direction on languages, like Arabic and Hebrew, complex script
+ like Hindi and ideographic languages like Chinese and Japanese.
+ This is really important, really, to have the possibility first to display
+ and second also to have the input method or what we call IME to handle
+ those inputs.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah.
+ The 
+\series bold
+input method editor, IME
+\series default
+, is something that people who don't speak 
+\series bold
+Japanese or Chinese
+\series default
+ or any of the other languages that use IMEs, they're not aware of that
+ 
+\series bold
+you can not enter the thousands and thousands of characters or ideographs
+ that are used in these languages just using a simple keyboard
+\series default
+.
+ So what you're doing is actually 
+\series bold
+use a kind of a pronunciation
+\series default
+ of it.
+ And you 
+\series bold
+type it in
+\series default
+ and you 
+\series bold
+get different candidates and then you select one
+\series default
+.
+ And this is something that obviously the operating system handles for you
+ but you need to be aware of it.
+ 
+\end_layout
+
+\begin_layout Standard
+And then for the last, this is really an important point is that 
+\series bold
+localization can be done as localize as you go
+\series default
+.
+ For the languages and locales you plan to support, translate none, some
+ or all of the user interface.
+ You need to 
+\series bold
+resize the dialogue boxes and you need to customize features for the local
+ market if necessary, and test to make sure that everything still works.
+
+\series default
+ But you don't have to do all languages at the same time.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I would like to add to this.
+ So first, we need to think about localization as a separate stage that
+ will come after the software development.
+ It actually can be integrated as part of the software development.
+ Especially if it's an agile development, can be part of it.
+ And as you said, 
+\series bold
+you don't need to translate all to localize for all languages at once.
+ You can actually have several tiers of languages
+\series default
+.
+ You start with one languages and then in tiers of five or ten important
+ languages, and then other tiers.
+ And you can translate, you know, through, you know, the life of the product
+ itself.
+ 
+\end_layout
+
+\begin_layout Standard
+Now you need also to 
+\series bold
+build everything in SQL and worldwide binary
+\series default
+, and this is what we discussed earlier.
+ 
+\series bold
+You need really to have one binary
+\series default
+.
+ This is 
+\series bold
+important
+\series default
+ first 
+\series bold
+for the maintenance of a program
+\series default
+, but also it's good for the development itself.
+ You know that for and et cetera, you have only one binary that you have,
+ and you can release this binary and later add more and more languages whenever
+ you have them ready for those markets.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah.
+ And the cool thing about having this 
+\series bold
+single binary approach
+\series default
+ is, like, well, it's kind of the negative, or the positive of what we were
+ talking before, right? 
+\series bold
+You now can have one service pack.
+ You can have one patching strategy.
+ And all of the features are already built into the signal binary
+\series default
+.
+ And that then allows you, I mean, also to look at stuff like 
+\series bold
+sim shipping or simultaneously shipping your software
+\series default
+, which is really an amazing thing once you get to a certain size that you
+ can go out to like 20 markets or even 
+\series bold
+like Windows does it to over one hundred markets in different languages
+ within a very short release delta
+\series default
+ because everything is so 
+\series bold
+streamlined
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I think the 
+\series bold
+short release delta
+\series default
+ is something very important.
+ Clearly the dream is to sim ship and have all the versions on the same
+ day, but it's okay and think again about agile development of fast release
+ of weekly release or release every month.
+ You can release in two languages and then a few days later to release more
+ and more languages.
+ But again, the delta should be very, very, very short.
+ The delta should be very short.
+ Experience the joy of faster innovation, happier customers, improve healthy
+ relationship and increase success.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah.
+ I mean that's obviously like motherhood and apple pie 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] We just threw a lot of terms at you and you should worry a bit because
+ we will test you on this or not.
+ This concept overlap and 
+\series bold
+people across industry use terminology in slightly different ways
+\series default
+.
+ Even we switched from 
+\series bold
+world ready
+\series default
+, and 
+\series bold
+international
+\series default
+, and international to world ready.
+ And we will slip a few times throughout the course, but we are trying to
+ stay consistent.
+ To begin immersing yourself in the concept we will build on for the rest
+ of the course, I recommend spending some time with the glossary that we
+ have put together.
+\end_layout
+
+\begin_layout Subsection
+The Process of Creating World-ready Software
+\end_layout
+
+\begin_layout Standard
+If you plan ahead, writing software that people all over the world can use
+ (meaning, it will work the way they expect) can be relatively straight-forward.
+ 
+\series bold
+Your end goal is to engineer software that’s world-ready
+\series default
+.
+ Ideally, you can 
+\series bold
+create a single binary executable
+\series default
+ that you can ship for all language editions of your software, 
+\series bold
+with the translated elements in separate modules
+\series default
+.
+ The more executables you have, the larger and more expensive your testing
+ effort will be.
+\end_layout
+
+\begin_layout Standard
+As you can imagine, there’s a process for making software world-ready.
+\end_layout
+
+\begin_layout Standard
+First, 
+\series bold
+let’s talk about the wrong way
+\series default
+ to approach this process.
+\end_layout
+
+\begin_layout Enumerate
+Design software that’s great for your market and works for the language
+ you speak.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Write the code, test it, finalize it, and ship it.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Suffer over the scathing online reviews of your software from people outside
+ your market who tried to use it and couldn’t, because it doesn’t support
+ entering the characters their language uses, it doesn’t display text according
+ the rules of their language, or it formats dates and numbers incorrectly.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Say “oops,” give the software you already shipped to a separate team (or,
+ as we used to say, “Throw it over the wall”), and tell them to make it
+ work for half a dozen other languages.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Get phone calls, emails, and visits with reports on how your software breaks
+ in all kinds of fun and interesting ways when the international team tries
+ to make it work for other languages.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Be forced to re-architect and clean up your code when you’re busy trying
+ to get your next rev to market.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ship both your international editions and your next rev later than you planned,
+ miss out on sales, and experience slow adoption because people who tried
+ to use your software before have already written it off.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Triage complaints from international customers about features that are missing
+ or still don’t work correctly, because you focused on languages and not
+ markets, which have differences that go beyond languages.
+ 
+\end_layout
+
+\begin_layout Standard
+If this is your process, you will have lots of problems—we give plenty in
+ this course—and you will spend more time and money than you should fixing
+ them.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Here’s the right way
+\series default
+ to do this.
+\end_layout
+
+\begin_layout Enumerate
+Get a commitment up front from everyone on the team to do their part to
+ globalize your software.
+ That is, ensure you do not design the features or code that make up the
+ core of your program around a single language or market.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Make sure your design and your code are locale-aware, that they account
+ for differences in conventions based on language, country or region, and
+ culture.
+ Locale-based information includes sort order; keyboard layout; and formatting
+ for dates, times, numbers, calendars, and currency.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Design your features and your code to be localizable, meaning you can translate
+ the User Interface and customize features for specific locales without
+ having to change your source code.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Enable your code to handle input, display, and processing of bidirectional
+ languages, like Arabic, complex scripts like Hindi, and ideographic languages,
+ like Japanese.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Localize as you go.
+ For the languages and locales you plan to support, translate none, some,
+ or all of the user interface; resize dialog boxes; customize features for
+ the local market if necessary; and test thoroughly to make sure everything
+ still works.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Build and maintain a single, worldwide binary – one program file that can
+ be used “as is” for any language edition of your software.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sim-ship (that is, “simultaneously ship”) your software to multiple markets
+ at the same time – on the same day or within a short release delta.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Experience the joys of faster innovation, happier customers, improved health
+ and relationships, and increased financial and personal success.
+ 
+\end_layout
+
+\begin_layout Standard
+We just threw a lot of terms at you.
+ These concepts overlap and people across the industry use the terminology
+ in slightly different ways.
+ We’ll be consistent throughout this course, however.
+ To begin immersing yourself in the concepts we’ll build on for the rest
+ of the course, we recommend spending some time reviewing the terminology
+ in Unit Five of this module.
+\end_layout
+
+\begin_layout Section
+Terminology
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Hi, I'm Bjorn 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Hi, I'm Daniel and we're here to discuss some common terminologies.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yes Daniel, I believe we have some disagreement here at times, when we
+ talk about these very simple terms that are used in developing international
+ software.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Such as?
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Internationalization.
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] What is internationalization, go on.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] So for me internationalization is the process of creating software for
+ multiple markets around the world.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah for me internationalization is actually, engineering of the product
+ to enable efficient adaptation of the product for the local requirements.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] I mean it's almost the same, but we have slight distinctions there.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yes, I agree because basically I'm looking more for the engineering process
+ really.
+ How we can take the product and make it more generic, then later we can
+ customize it to different markets.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] When I was on the international team, I actually never really liked internatio
+nalization because what does it actually mean? Is international everything
+ outside of the USA? Or is international just something that is not local?
+ So I think this term is actually overused, but you need to understand what
+ it means.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I agree with you completely, but I'm looking at internationalization
+ not just will be outside the USA.
+ I'm thinking just how to make the product as generic as possible.
+ Anything in the product should be generic.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah.
+ Okay, then the next term, obviously, that gets used a lot is globalization.
+ Globalization is a cool term, it obviously has a completely different meaning
+ in finance terms or something.
+ But for us it means, it's the process of making your software world ready.
+ And world ready is obviously something we still need to define.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+ [LAUGH] 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] But, I love the term world ready.
+ But, globalization your software means that you write the parts of your
+ code that deal with the functionality, like text and input display, sorting,
+ and so on.
+ And then you make this generic.
+ And then, that means that your code works, as is, for multiple languages
+ and locations.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah I agree with your definition.
+ Clearly I have a slight different definition style.
+ Certainly the globalization readaptation of the marketing strategy to regional
+ requirement of all kinds.
+ So I'm not looking on only the engineering side, as you discussed but more
+ about how we should adapt the product really for marketing strategy? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] You see for me what you're saying there, with the marketing strategies,
+ this is what I call market customization.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, differently we have some difference in the definition of those terms.
+ But I think we agree that, what is internationalization and what is globalizati
+on.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] I think as long as we remember that globalization in software is not something
+ bad that destroys local jobs, but it actually creates jobs.
+ And it's not something like marketization where you go into a market and
+ try to blast everybody with your requirements so that they can use your
+ product.
+ It's actually something that you're doing for the rest of the world to
+ make software run, or making your marketing campaigns successful in other
+ countries.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I agree with you, I'm thinking about the user that's sits in New
+ York, or in London, or in Paris, or in Delhi, or in Shanghai, or in Beijing.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] In some city we get it.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] In some city.
+ And basically we need to adapt the software for him.
+ He doesn't need to be adapt to all software, we need to customize the software
+ and the product for this user, which is somewhere in the world.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah, so for localization or localizing something what's really important
+ for me is that people understand it's not translation.
+ Translation is just taking something from one language to another.
+ With localization we're actually talking about customizing software for
+ a specific market.
+ Customization obviously includes translation of the user interface and
+ documentation, but we're also talking about offering features that are
+ specific to a language or market.
+ The more you localize, the more effort it takes, but the more you get in
+ return.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah, I agree with you Bjorn.
+ I think that you know, localization is the process of adapting a software
+ or a product and a company material to see the target, market local.
+ This is the process of localization.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah and the other thing that's important to look at is, that often times
+ when you look at the large software team there is a localization team.
+ And that's a little bit of a misnomer because localization teams often
+ cannot really adapt and customize features.
+ They are mainly there to work on the translation of the UI and the documentatio
+n.
+ So, this is something were, like all the localization teams, want to have
+ the developers understand, that it's more than translation, but often times
+ it is limited to translation.
+ And then another aspect that we should mention here is, often, like when
+ we look at Microsoft as localization, we always have no compile localization,
+ which means we're taking all the resources, everything that's used in the
+ UI, and move them into something like text files or into a database these
+ days.
+ And then we're localizing this database, and then we're putting the terms
+ back into the UI or into the software, into the binary files without actually
+ recompiling the source.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] I have a question for you Bjorn.
+ You mentioned earlier that you like the term world readiness.
+ Can you tell me what is world ready? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Sure, sure.
+ Actually I love world readiness, world ready is something that I'm kind
+ of proud of, because my team back in 2002, or something.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Whoa.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Like we started to use this term, and I actually started a team at Microsoft
+ which was called the world ready guides.
+ We wanted to go away from all this terminology that can be so confusing.
+ Internationalization, globalization, localization and we just wanted to
+ talk to people about being world ready.
+ I mean it's so simple, nobody can misunderstand what world ready means.
+ It means ready for the world, right? You designed and coded to have, like
+ that you can go into any market without redesigning or recoding.
+ You can create additions of code for a market, of your software for markets
+ all over the world.
+ And it will work the way people in those market expect.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Yeah.
+ Well thank you Bjorn for the definition.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah Daniel, I believe definitions are really important to understand
+ what we're doing here.
+ And as I said world readiness is something close to my heart but as long
+ as you do the work, you can call your software whatever you want.
+ Thank you all.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Daniel
+\color inherit
+] Thank you.
+\end_layout
+
+\begin_layout Subsection
+Terminology
+\end_layout
+
+\begin_layout Subsubsection*
+TERMINOLOGY
+\end_layout
+
+\begin_layout Standard
+Wow, a glossary, everyone’s favorite read! Actually, this unit serves two
+ purposes.
+ The first is as a reference.
+ The second is as a conceptual aid.
+ This is not a full glossary of terminology used in this course and the
+ next two, but it contains enough definitions to get the point across that
+ there are many details to consider when designing and building world-ready
+ software.
+\end_layout
+
+\begin_layout Subsubsection*
+CORE CONCEPTS
+\end_layout
+
+\begin_layout Paragraph
+Globalize or Globalization
+\end_layout
+
+\begin_layout Standard
+The process of developing software whose features and code design support
+ the input, display, and output of multiple languages and locale-specific
+ data.
+\end_layout
+
+\begin_layout Paragraph
+Internationalization
+\end_layout
+
+\begin_layout Standard
+The process of globalizing software and making it localizable.
+ Often used interchangeably with “globalization.”
+\end_layout
+
+\begin_layout Paragraph
+Level of localization
+\end_layout
+
+\begin_layout Standard
+The amount of translation and customization completed for a specific language
+ edition of software.
+ Levels range from translating nothing to shipping a completely translated
+ product with features customized for the local market.
+\end_layout
+
+\begin_layout Paragraph
+Locale
+\end_layout
+
+\begin_layout Standard
+A set of conventions based on language, country/region, and cultural standards:
+\end_layout
+
+\begin_layout Itemize
+Written script(s) 
+\end_layout
+
+\begin_layout Itemize
+Direction of text 
+\end_layout
+
+\begin_layout Itemize
+Currency symbol 
+\end_layout
+
+\begin_layout Itemize
+Long-date format 
+\end_layout
+
+\begin_layout Itemize
+Short-date format 
+\end_layout
+
+\begin_layout Itemize
+Time format 
+\end_layout
+
+\begin_layout Itemize
+Calendar 
+\end_layout
+
+\begin_layout Itemize
+Default paper size 
+\end_layout
+
+\begin_layout Itemize
+Decimal separator 
+\end_layout
+
+\begin_layout Itemize
+List separator 
+\end_layout
+
+\begin_layout Itemize
+Thousands separator 
+\end_layout
+
+\begin_layout Itemize
+Sort order 
+\end_layout
+
+\begin_layout Itemize
+Keyboard layout 
+\end_layout
+
+\begin_layout Paragraph
+Locale-aware or locale-sensitive
+\end_layout
+
+\begin_layout Standard
+Exhibiting different behavior or returning different data, based on locale.
+\end_layout
+
+\begin_layout Paragraph
+Localize or Localization
+\end_layout
+
+\begin_layout Standard
+The process of adapting software for a specific local market, which may
+ include translating the user interface, resizing dialog boxes, customizing
+ or adding features (if necessary), and testing results to ensure that the
+ software still works as expected.
+\end_layout
+
+\begin_layout Paragraph
+Localizable
+\end_layout
+
+\begin_layout Standard
+Used to describe software that is straightforward to translate and customize
+ for specific locales without requiring changes to source code.
+\end_layout
+
+\begin_layout Paragraph
+Single binary or Worldwide binary
+\end_layout
+
+\begin_layout Standard
+A single program file that can be used “as is” for any language edition
+ of your software.
+\end_layout
+
+\begin_layout Paragraph
+World-ready
+\end_layout
+
+\begin_layout Standard
+Software that works the way people in different areas of the world, who
+ speak different languages, expect it to.
+ The design of its features, and the way its code is organized, makes localizati
+on straightforward.
+\end_layout
+
+\begin_layout Subsubsection*
+CHARACTERS AND LANGUAGE (NON-TECHNICAL)
+\end_layout
+
+\begin_layout Paragraph
+Accented character 
+\end_layout
+
+\begin_layout Standard
+A character that has a diacritic attached to it, such as ‘ö.’
+\end_layout
+
+\begin_layout Paragraph
+Alphabet 
+\end_layout
+
+\begin_layout Standard
+Elements of a writing system composed of a collection of letters that have
+ a one-to-one relationship with a sound.
+\end_layout
+
+\begin_layout Paragraph
+Alphanumeric 
+\end_layout
+
+\begin_layout Standard
+Consisting of either letters or numbers, or both.
+\end_layout
+
+\begin_layout Paragraph
+Bidirectional
+\end_layout
+
+\begin_layout Standard
+Text that includes characters that are read from left-to-right and characters
+ that are read from right-to-left.
+ Most Arabic and Hebrew text are read from right-to-left, but numbers and
+ Western terms embedded within Arabic or Hebrew text are read from left-to-right.
+\end_layout
+
+\begin_layout Paragraph
+Case
+\end_layout
+
+\begin_layout Standard
+Two distinct variations or forms of the same character within the same alphabet.
+ These variants, which differ in shape and size, are called “uppercase”
+ letters (also known as “capital” or “majuscule” letters) and “lowercase”
+ letters (also known as “small” or “miniscule” letters).
+\end_layout
+
+\begin_layout Paragraph
+Character 
+\end_layout
+
+\begin_layout Standard
+(1) The smallest component of a writing system or script that has semantic
+ value.
+ A character refers to an abstract idea rather than to a specific glyph
+ or shape that a character might have once rendered or displayed.
+ (2) A code element.
+\end_layout
+
+\begin_layout Paragraph
+Collation 
+\end_layout
+
+\begin_layout Standard
+A set of rules that determine how textual data is sorted and compared.
+\end_layout
+
+\begin_layout Paragraph
+Combined characters or ligatures 
+\end_layout
+
+\begin_layout Standard
+Characters that join into one character when placed together.
+ One example is the “ae” combination in English, which is sometimes represented
+ by a single character “æ.” The Arabic script has many combining characters.
+\end_layout
+
+\begin_layout Paragraph
+Complex script 
+\end_layout
+
+\begin_layout Standard
+A script that requires special handling when it comes to shaping and laying
+ out characters based on linguistic requirements.
+ Complex scripts can have any combination of the following attributes: bidirecti
+onal rendering, contextual shaping, combining characters, as well as specialized
+ word-breaking and justification rules.
+\end_layout
+
+\begin_layout Paragraph
+Cyrillic script
+\end_layout
+
+\begin_layout Standard
+The script traditionally used for writing various Slavic languages, including
+ Russian.
+\end_layout
+
+\begin_layout Paragraph
+Diacritic 
+\end_layout
+
+\begin_layout Standard
+A character that is attached to or overlays a preceding base character.
+ Most diacritics are non-spacing, meaning they don’t increase the width
+ of the base character.
+\end_layout
+
+\begin_layout Paragraph
+Diaresis 
+\end_layout
+
+\begin_layout Standard
+Two dots placed over a Latin vowel to indicate that the vowel is pronounced
+ as a separate syllable, as in “naïve.” Typically used when two vowels are
+ adjacent, but should be pronounced separately rather than as a diphthong.
+\end_layout
+
+\begin_layout Paragraph
+Digraph 
+\end_layout
+
+\begin_layout Standard
+Characters written separately but forming a single lexical unit (for purposes
+ of sorting)—for example, the Danish “aa” and the Spanish “ch” and “ll.”
+\end_layout
+
+\begin_layout Paragraph
+Glyph 
+\end_layout
+
+\begin_layout Standard
+The actual shape (bit pattern, outline, and so forth) of a character image.
+ For example, an italic “a” and a roman “a” are two different glyphs representin
+g the same character.
+\end_layout
+
+\begin_layout Paragraph
+Ideographic character
+\end_layout
+
+\begin_layout Standard
+A character of Chinese origin representing a word or a syllable that is
+ generally used in more than one Asian language.
+\end_layout
+
+\begin_layout Paragraph
+Kanji
+\end_layout
+
+\begin_layout Standard
+The Japanese name for ideographic characters of Chinese origin.
+\end_layout
+
+\begin_layout Paragraph
+Latin script
+\end_layout
+
+\begin_layout Standard
+The set of 26 characters (A-Z) inherited from the Roman Empire that, together
+ with later additions, is used to write languages throughout Africa, the
+ Americas, parts of Asia, Europe and Oceania.
+\end_layout
+
+\begin_layout Paragraph
+Letter
+\end_layout
+
+\begin_layout Standard
+(1) The basic element of an alphabet.
+ (2) A higher level of abstraction than Character.
+ For example, both the Spanish “ch” and the Danish “aa” are considered single
+ letters for some purposes.
+\end_layout
+
+\begin_layout Paragraph
+Ligature
+\end_layout
+
+\begin_layout Standard
+Two or more characters combined to represent a single typographical character.
+ The modern Latin script uses only a few.
+ Other scripts use many ligatures that depend on font and style.
+ Some languages, such as Arabic, have mandatory ligatures; other languages
+ have characters that were derived from ligatures, such as the German ligature
+ of long and short “s” (ß) and the ampersand (&), which is the contracted
+ form of the Latin word “et.”
+\end_layout
+
+\begin_layout Paragraph
+Logograph or logographic
+\end_layout
+
+\begin_layout Standard
+From the Greek “logo,” meaning “word”: a letter, symbol, or sign used to
+ represent an entire word.
+\end_layout
+
+\begin_layout Paragraph
+Lower case
+\end_layout
+
+\begin_layout Standard
+Denotes letters that are not capitalized.
+ The notion of lowercase does not apply to East Asian or Middle Eastern
+ scripts.
+\end_layout
+
+\begin_layout Paragraph
+Morpheme
+\end_layout
+
+\begin_layout Standard
+The smallest meaningful unit of a word.
+ The word “dog” is one morpheme.
+ The word “dogs” is two morphemes: “dog” + the plural marker “s.” Many ideographs
+ are based on morphemes.
+\end_layout
+
+\begin_layout Paragraph
+Phoneme
+\end_layout
+
+\begin_layout Standard
+A unique individual sound used in a language.
+\end_layout
+
+\begin_layout Paragraph
+Reading order
+\end_layout
+
+\begin_layout Standard
+The overall direction of a sequence of text.
+ Whereas words in a given script always flow in the direction associated
+ with that script (for example, left-to-right (LTR) for Latin, right-to-left
+ (RTL) for Arabic and Hebrew), the flow of the sentence itself depends on
+ the reading order.
+ For example, a mixture of Arabic and French text can be regarded as French
+ embedded in an overall Arabic sentence, implying RTL reading order, or
+ as Arabic embedded in French, implying LTR reading order.
+\end_layout
+
+\begin_layout Paragraph
+Script
+\end_layout
+
+\begin_layout Standard
+A collection of characters for displaying written text, all of which have
+ a common characteristic that justifies their consideration as a distinct
+ set.
+ One script can be used for several different languages (for example, the
+ Latin script, which covers all of Western Europe).
+ Some written languages require multiple scripts (for example, Japanese,
+ which requires at least three).
+\end_layout
+
+\begin_layout Paragraph
+Separators
+\end_layout
+
+\begin_layout Standard
+Symbols used to separate items in a list, mark the thousands place in numbers,
+ or represent the decimal point.
+ They vary based on locale.
+\end_layout
+
+\begin_layout Paragraph
+Syllabary
+\end_layout
+
+\begin_layout Standard
+A set of written characters in which each character represents a syllable
+ (for example, a consonant sound followed by a vowel sound).
+ Examples of syllabaries include Japanese katakana and hiragana and the
+ Indic scripts.
+\end_layout
+
+\begin_layout Paragraph
+Writing system
+\end_layout
+
+\begin_layout Standard
+The collection of scripts and orthography required to represent a given
+ human language in visual media.
+\end_layout
+
+\begin_layout Subsubsection*
+CHARACTERS AND LANGUAGE (TECHNICAL)
+\end_layout
+
+\begin_layout Paragraph
+ASCII
+\end_layout
+
+\begin_layout Standard
+Acronym for American Standard Code for Information Interchange, a 7-bit
+ encoding.
+ Although limited, ASCII’s set of 128 characters is the common denominator
+ among most standard character sets.
+\end_layout
+
+\begin_layout Paragraph
+ANSI
+\end_layout
+
+\begin_layout Standard
+Acronym for the American National Standards Institute.
+ The Windows code page 1252 was originally based on an ANSI draft that became
+ International Organization for Standardization (ISO) Standard 8859-1.
+\end_layout
+
+\begin_layout Paragraph
+Base character
+\end_layout
+
+\begin_layout Standard
+An encoding point that does not graphically combine with a preceding character
+ and that is neither a control nor a format character.
+ The Latin “a” is an example of a base character.
+\end_layout
+
+\begin_layout Paragraph
+Charset or Character set
+\end_layout
+
+\begin_layout Standard
+A set of characters used in Windows, also known as a “Code Page”
+\end_layout
+
+\begin_layout Paragraph
+Code page
+\end_layout
+
+\begin_layout Standard
+An ordered set of characters of a given script which associates a numeric
+ index (code point value) with each character.
+\end_layout
+
+\begin_layout Paragraph
+Code point, or code element
+\end_layout
+
+\begin_layout Standard
+(1) The minimum bit combination that can represent a unit of encoded text
+ for processing or exchange.
+ (2) An index into a code page or a Unicode standard.
+\end_layout
+
+\begin_layout Paragraph
+Combining Character
+\end_layout
+
+\begin_layout Standard
+A character that combines graphically with a preceding base character.
+ The combining character “applies” to the base character.
+ The combining acute accent mark (‘) – U+0301 – is an example of a combining
+ character.
+\end_layout
+
+\begin_layout Paragraph
+Enable or Enabling
+\end_layout
+
+\begin_layout Standard
+Altering software code to handle input, display, and editing of bidirectional
+ languages such as Arabic and Hebrew, or Asian languages such as Chinese
+ and Japanese.
+\end_layout
+
+\begin_layout Paragraph
+Encoding
+\end_layout
+
+\begin_layout Standard
+A method or system of assigning numeric values to characters (for example
+ ASCII or Unicode).
+\end_layout
+
+\begin_layout Paragraph
+Extended Characters
+\end_layout
+
+\begin_layout Standard
+(1) Characters above the ASCII range (32 – 137) in single-byte character
+ sets.
+ (2) Accented characters.
+\end_layout
+
+\begin_layout Paragraph
+Floating Accent or Floating Diacritic
+\end_layout
+
+\begin_layout Standard
+A combining character that overlays the preceding base character; it can
+ potentially change position or shape according to the shape of the base
+ character.
+ The combining right arrow above ȍ, character (U+20D7), is an example of
+ a floating diacritic.
+\end_layout
+
+\begin_layout Paragraph
+Font
+\end_layout
+
+\begin_layout Standard
+Any of numerous sets of graphical representations of characters that can
+ be installed on a computer, printer, or another graphic output device.
+\end_layout
+
+\begin_layout Paragraph
+Input Method
+\end_layout
+
+\begin_layout Standard
+Any method used to enter text or data, including keyboards and Input Method
+ Editors, as well as voice-recognition engines or handwriting-recognition
+ engines.
+\end_layout
+
+\begin_layout Paragraph
+Input Method Editor
+\end_layout
+
+\begin_layout Standard
+A program that performs the conversion between keystrokes and ideographs
+ or other characters, usually by user-guided dictionary lookup.
+\end_layout
+
+\begin_layout Paragraph
+Keyboard layout
+\end_layout
+
+\begin_layout Standard
+A standard arrangement of characters on a keyboard that defines which keys
+ produce particular characters.
+\end_layout
+
+\begin_layout Paragraph
+Layout
+\end_layout
+
+\begin_layout Standard
+The order, positioning, and spacing of text or other user-interface elements.
+\end_layout
+
+\begin_layout Paragraph
+Multilingual
+\end_layout
+
+\begin_layout Standard
+Supporting more than one language simultaneously.
+ Often implies the ability to handle more than one script or character set.
+\end_layout
+
+\begin_layout Paragraph
+Non-spacing character
+\end_layout
+
+\begin_layout Standard
+A character, such as a diacritic, that has no meaning by itself but overlaps
+ an adjacent character to form a third character.
+\end_layout
+
+\begin_layout Paragraph
+Shortcut key
+\end_layout
+
+\begin_layout Standard
+A keyboard combination that activates a software command directly, as an
+ alternative to activating the command through menus.
+\end_layout
+
+\begin_layout Paragraph
+Spacing character
+\end_layout
+
+\begin_layout Standard
+A character with a nonzero width.
+\end_layout
+
+\begin_layout Paragraph
+Text element
+\end_layout
+
+\begin_layout Standard
+The smallest unit of text in a script that can be displayed or edited.
+\end_layout
+
+\begin_layout Paragraph
+Unicode
+\end_layout
+
+\begin_layout Standard
+A worldwide character encoding that includes most of the world’s scripts;
+ it is developed, maintained, and promoted by the Unicode Consortium, a
+ nonprofit computer industry organization.
+ Unicode encompasses virtually all characters used widely in computers today.
+ It is capable of addressing more than 1.1 million code points.
+ The standard has provisions for 8-bit, 16-bit and 32-bit encoding forms.
+\end_layout
+
+\begin_layout Section
+Course Name Change 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Now that you know more about internationalization, localization, and world
+ readiness, you will understand that developing international software is
+ not really a good title for the course.
+ What does international actually mean? Does this mean outside of the US
+ or other countries? Well, so from now on we will talk about developing
+ world-ready software.
+ Let me do the course introduction again.
+ Welcome to Developing World-Ready Software.
+ My name is Bjorn.
+ [LAUGH]
+\end_layout
+
+\begin_layout Section
+Basic UX Design Considerations 
+\end_layout
+
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Excellent, so we learned a lot on how to design your team and lots of
+ other things, but I believe what's really necessary is to talk about, what
+ are the components of the user interface? Of the user experience, or UX?
+ And the user experience consists of multiple items that need to be localized.
+ One of that is menus and dialogues.
+ Right? I mean menus and dialogues are kind of the interface that you have
+ to your software, and we need to make sure that those are localized.
+ So is there anything special that you need to consider when localizing
+ the menus and dialogues over? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Right.
+ So we touched on a few items already.
+ You have to make sure that you expose all those strings to your translator
+ and then often times what you have in menus and dialogues is hot keys.
+ They're called hot keys or accelerator keys where you just can use your
+ key board to get to a certain menu item right? And what you have to make
+ sure is that you let localizers change those so it makes sense.
+ And that can lead to a lot of problems because then you might have to use
+ the same accelerator key a few times in dialog.
+ And then the user doesn't get what they want.
+ So then you have to think about, well if I allow that, I have to test it
+ as well.
+ So you can run into a few problems there if you use accelerator keys.
+ That's a good design decision, how you do your dialogs.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah.
+ And especially with the keyboard shortcut, one thing that came to my mind
+ that I saw very early on in my localization career is that sometimes you're
+ using a shortcut key which is actually not on the standard keyboard or
+ not easy to get to on the standard keyboard of that country.
+ So this is something that you need to look at.
+ There are resources available online where you can look at all the keyboard
+ layouts and just checking out whether the tilde key for example is a standard
+ key on the keyboard or if it's a combining character is super important
+ to look at.
+ I can send other graphics.
+ We already talked about that we should try to avoid localizing images as
+ much as possible.
+ And we mentioned also that some of the icons are very culturally sensitive.
+ What other things do we need to consider when we look at this? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Yeah, I have a good example for icons.
+ When I first came to the United States, in a mail application it uses mail
+ box where the flag goes up and down.
+ And I had no idea what that was and that is not how our mail is sent and
+ delivered in Europe.
+ So when the flag was up and it's supposed to mean something I was confused
+ and didn't understand at all.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Right.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] So it's a good example of if you use an icon to convey something that
+ it might not be understood at all in other cultures.
+ So if you want to use icons, you have to really make sure that they're
+ globally accepted.
+ And you also have to make sure that they're not, that they're not politically
+ sensitive.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Right, well or you create an icon that becomes an icon around the world
+ and you're just setting a new standard, let's hope that happens.
+ So, audio and video, very similar, very, very similar to icons and graphics.
+ If you use audio, try not to use verts in audio, like don't try to record
+ texts or messages because those are really hard to localize.
+ Same is true with video.
+ But obviously if your application needs that, then you need to bite the
+ bullet and have it localized.
+ It's impossible to extract resources out of it.
+ You're basically asking for dubbing or a reshoot.
+ Also when you consider audio, lots of people think it's funny when you
+ make a mistake to say oops or something.
+ Just remember not everybody around the world says oops or ouch or whatever.
+ This might be not something that you realize but each language has their
+ own oops and ouch sounds.
+ And each language has their own animal sounds too.
+ So it's, all this stuff does get localized.
+ It's very, very specific to countries and you need to make sure that you're
+ following the rules.
+ We talked a lot about error messages.
+ So in an earlier video we talked about concatenated strings and all of
+ that.
+ Other things that are important in error messages, what would you say for
+ error messages? What's the one thing that people, who haven't worked for
+ 20-some years in localization, often screw up? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Well, I think for our messages, often they are written in a way that they
+ are not really helpful, they're very technical.
+ Then the runtime concatenation using of variables to put certain characters
+ or even words back into the string is always very hard for a localization
+ company to really do a good job on.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Right.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] So it's just of developers try to be very efficient.
+ Reuse and reuse the text they've already typed, and then they'll paste
+ it together and think, oh, wow, I've written very efficient code and it
+ makes the life for the localization company so much harder.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Right.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] So, that's really the biggest thing I've seen over the years.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] I just say the best error message is something like Percent S could not
+ be Percent S.
+ That's obviously super easy to localize, you know exactly what Percent
+ S is and you know exactly what Percent S is and you can just be sure that
+ this error message will just work just fine.
+ So no it doesn't.
+ Make sure when you do an error message, even if you have to write the same
+ sentence ten times and you say, file could not be opened.
+ File could not be printed and so on.
+ It looks like you're wasting time and wasting resources, but you're actually
+ saving money later on when you're going for a world ready design and when
+ you're going for world wide market, because you don't know if the grammar
+ changes.
+ If stuff has to be re-sorted.
+ In some languages the first percent s has to move to the second place and
+ so on.
+ And how are you doing this if you're just saying percent s has to be percent
+ s or could not be percent s.
+ So that's really I mean don't just think about like what we used before
+ in an example that you attach an s to make it plural.
+ It's also like the basic forms of grammar that needs to be followed like
+ work order which is different.
+ That actually leads me to another favorite of mine which is the formatted
+ text, so anything that has date, time, currency and so on in there needs
+ to be considered as a very, very special case, because you cannot assume.
+ I mean it's very obvious to most people, that the currency in lots of countries
+ is different.
+ I mean, even the person who has never left their home country kind of understan
+ds that other countries are using different currencies.
+ What's not obvious to everybody is the different time and date formats
+ are used.
+ You understand that there are different time zones, but that this is different
+ formatted.
+ Uwe, can you give me a few examples of that? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Yeah, we had the one example already in a previous video about Spain mixing
+ up the day and the month order, right.
+ And- 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Well actually, I wouldn't say they're mixing it up.
+ They're just having a different format to the US.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] No, yeah.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] You're becoming very US-centric, Uwe.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] That's right.
+ Yeah, that's It's what happens when you've lived here for a long time.
+ Exactly.
+ So but again the recommendation we made at that point is don't reinvent
+ the wheel.
+ Don't try to do your own thing.
+ Use what is already available in the operating system to support you in
+ terms of times and date and currency.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Yeah, and just to mention this very, very briefly, you also need to consider
+ when you're having a global application that runs worldwide, that you should
+ standardize, like for your log files, on one time zone.
+ Because otherwise you run into lots of problems of synchronization.
+ This is just a side topic.
+ Now lots of people like to make their UI or UX super special by using a
+ really cool font.
+ Comic San Serif comes to my mind there.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Right, yeah.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Or something which is actually cool, but what could be a draw back of
+ that? 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Well, it sounds like a great idea, and you can make it really pretty,
+ and it's not to expensive because, you know, you don't have that many character
+s if you start with English.
+ But think about Asian languages, Arabic, Hebrew, you don't use any of these,
+ right? So then you have to get a font that has all these characters that
+ you need to support.
+ And then it becomes really expensive really fast.
+ So you're much better served with looking what font is available in the
+ operating system of the platform that you're working on and use one of
+ those.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] Mm, Mm.
+ Yeah and then, when you look at other text right? Lots of people forget
+ that there is text that is supporting your application.
+ And you have what we in general call content.
+ So you have help files or documentation, perhaps you don't ship, obviously,
+ local help files anymore.
+ But you have a website that has all the user information to get them going
+ with your app.
+ And one thing I've seen often times is that we use metaphors or slang.
+ And this stuff is hard to translate.
+ Like a touch down pretty much only means something in the US.
+ It means a lot in the US but not much outside of the US.
+ Because most countries do not follow US football.
+ And these are just generally hard to translate.
+ And then we thought we were kind of going away from packaging a lot and
+ we initially we didn't even want to talk about it, but IOT, Internet of
+ Things, right.
+ You're actually starting to have hardware again, and you need to package
+ it somehow.
+ And that's something that we need to consider.
+ Is the packaging appealing? Do we have words on there that we need to have
+ and stuff that we need to cover.
+ Which, last but not least, comes to the name of your product.
+ Name of your product is, A, you need to make sure that it's not offensive
+ somewhere, that you're not using a word that doesn't work in another language.
+ What other things with the naming of a product that should be considered?
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Uwe
+\color inherit
+] Well, first of all you have to decide is my name a global name and does
+ it make sense in all the countries of the world.
+ Sometimes you have little prepositions in the name and usually you want
+ to translate those, at least for some languages.
+ So I would recommend if you invent a new name, make sure it doesn't mean
+ a swear word in another language.
+ We have lots of examples of that from the past, right? And make sure it's
+ really, it doesn't have the way that it has to be translated.
+ So be really smart when you, when you come across with your brand name.
+ 
+\end_layout
+
+\begin_layout Standard
+[
+\color blue
+Bjorn
+\color inherit
+] So one resource we have at Microsoft that we really need to point you
+ to, and it's super helpful.
+ And we will obviously put the link into the resource section of this course,
+ is the Microsoft style guide.
+ The Microsoft style guide gives you the general layout, what the file menu
+ should look like and what other menus should look like, what the dialogue
+ box would look like and so on.
+ But it also gives you the standard translations of all of that.
+ So all of this will help you to make your UX, your user experience as useful
+ as possible.
+ And as easy to make it world ready.
+\end_layout
+
+\begin_layout Subsection
+Basic UX Design Considerations
+\end_layout
+
+\begin_layout Standard
+A great User Experience (UX) makes software easy and enjoyable to use.
+ The next course in this series, which is about design, will cover this
+ topic in detail.
+ For now, we’ll describe at a high level how globalizing your software can
+ affect basic UX elements, which will be helpful for planning purposes.
+\end_layout
+
+\begin_layout Standard
+Some people equate “User Experience” with the User Interface (UI), but the
+ UI is a subset of the User Experience.
+ UX design also includes how features work, for example, what steps a user
+ has to follow to complete a task.
+ Any feature you design should, as much as possible, work the same way across
+ all language editions of your software.
+ This simply means that when you make design choices, pick options that
+ will work for most or all of your target markets.
+ If any functionality needs to vary from market to market, isolate it in
+ your design and code to make it easy to swap one market-specific module
+ for another, as some programs do with grammar checkers.
+\end_layout
+
+\begin_layout Subsubsection*
+THE USER INTERFACE
+\end_layout
+
+\begin_layout Standard
+The UI is, of course, the most visible part of your software.
+ It includes elements with text, such as title bars, menus, dialog boxes,
+ buttons, messages and tool tips, as well as keyboard shortcuts.
+ The trick is to design your UI so you don’t have to redesign it if the
+ translated text ends up longer or taller than the original.
+ If your design is too crowded, you may have to resize or even relocate
+ UI controls, which can be time consuming and expensive.
+\end_layout
+
+\begin_layout Standard
+In addition to text length, font size can also differ among language groups.
+ For example, East Asian languages usually display text in a larger font
+ size than other language groups, which means that edit boxes, static text,
+ and button controls need larger vertical spacing.
+ Bidirectional languages like Arabic and Hebrew require “mirroring” of the
+ screen layout, including menus, text, dialog boxes, and edit boxes, to
+ accommodate right-to-left (RTL) reading order.
+\end_layout
+
+\begin_layout Standard
+The best way to ensure that the UI has a consistent look and feel across
+ all editions of your software is to design it up-front to accommodate the
+ variances that language and locale will introduce, such as longer text
+ on dialog box buttons.
+ At the same time, whoever is responsible for translation should only change
+ the UI layout design (for example, rearrange elements within a dialog box)
+ if absolutely necessary.
+\end_layout
+
+\begin_layout Subsubsection*
+TERMINOLOGY
+\end_layout
+
+\begin_layout Standard
+Terminology that is clear, concise, and consistent is key to ease-of-translation
+ as well as ease-of-use.
+ Clear phrasing of the original text helps translators interpret the text’s
+ intent correctly and translate it accurately.
+ This makes colloquialisms, idioms or metaphors risky, as they may have
+ no equivalent in another language.
+ They can be difficult to translate, and may potentially offend some cultures
+ (even if they speak the same language).
+ Conciseness is important for reducing the size of translated text—keep
+ in mind that many translation services charge by the word.
+ Consistent terminology is particularly important when automated translation
+ tools come into play.
+ Two words may have similar meaning in one language, but the meanings of
+ their automated translations may differ markedly.
+ Whenever possible, use standard glossaries for common software terms such
+ as “File” “Edit” “Save” “Delete” and so forth.
+\end_layout
+
+\begin_layout Subsubsection*
+GRAPHICS & MULTIMEDIA
+\end_layout
+
+\begin_layout Standard
+Graphics, such as photos or icons, have the advantage of communicating more
+ universally than text, provided they are not culture-specific.
+ Choose graphics that are not biased toward a particular culture or locale,
+ and rather than embedding text within graphics, overlay it.
+ Having to source new graphics for additional markets or languages can get
+ very expensive.
+ In addition, having different images can confuse people who use more than
+ one language edition of your software (for example, people who work in
+ multinational companies or carry multiple devices configured for different
+ languages).
+\end_layout
+
+\begin_layout Standard
+Also keep in mind that graphics used to represent abstract concepts may
+ have different meanings in different contexts.
+ Examples include icons that imply direction, such as “Undo” and “Repeat.”
+ An arrow pointing left could mean “undo” in languages that read left-to-right,
+ but “redo” in languages that read right-to-left.
+\end_layout
+
+\begin_layout Subsubsection*
+FORMATTING DATA
+\end_layout
+
+\begin_layout Standard
+Operating systems or programming language libraries offer functions or Applicati
+on Programming Interfaces (APIs) that handle nuances in number formatting,
+ sorting order, capitalization, and other locale-dependent functionality.
+ Make use of them whenever possible.
+ If the system does not provide the functionality you need to display a
+ specific type of data differently based on language or market and you have
+ to write it yourself, make sure you put the functionality into a separate
+ component.
+ That way it will be easier to modify when you add support for new languages
+ and markets.
+\end_layout
+
+\begin_layout Subsubsection*
+HELP AND SUPPORT
+\end_layout
+
+\begin_layout Standard
+If you cannot offer a fully localized product, prioritize localizing the
+ product components that will help your customers have the best experience.
+ If you have a great UI design and use standard terminology, then people
+ who do not speak the language your UI is in (or do not speak it well),
+ can usually get by as long as you have fully translated help files they
+ can consult.
+\end_layout
+
+\begin_layout Section
+Basic Engineering Considerations 
+\end_layout
+
+\begin_layout Section
+UX and Engineering Errors 
+\end_layout
+
+\begin_layout Section
+World Ready Marketing
+\end_layout
+
+\end_body
+\end_document
