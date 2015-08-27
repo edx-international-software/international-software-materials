@@ -4936,7 +4936,7 @@ Some people equate “User Experience” with the User Interface (UI), but the
 \end_layout
 
 \begin_layout Subsubsection*
-THE USER INTERFACE
+The User Interface
 \end_layout
 
 \begin_layout Standard
@@ -4970,7 +4970,7 @@ The best way to ensure that the UI has a consistent look and feel across
 \end_layout
 
 \begin_layout Subsubsection*
-TERMINOLOGY
+Terminology
 \end_layout
 
 \begin_layout Standard
@@ -4993,7 +4993,7 @@ Terminology that is clear, concise, and consistent is key to ease-of-translation
 \end_layout
 
 \begin_layout Subsubsection*
-GRAPHICS & MULTIMEDIA
+Graphics and Multimedia
 \end_layout
 
 \begin_layout Standard
@@ -5018,7 +5018,7 @@ Also keep in mind that graphics used to represent abstract concepts may
 \end_layout
 
 \begin_layout Subsubsection*
-FORMATTING DATA
+Formatting Data
 \end_layout
 
 \begin_layout Standard
@@ -5035,7 +5035,7 @@ on Programming Interfaces (APIs) that handle nuances in number formatting,
 \end_layout
 
 \begin_layout Subsubsection*
-HELP AND SUPPORTS
+Help and Supports
 \end_layout
 
 \begin_layout Standard
@@ -5051,12 +5051,359 @@ If you cannot offer a fully localized product, prioritize localizing the
 Basic Engineering Considerations 
 \end_layout
 
+\begin_layout Subsection
+Video Transcript
+\end_layout
+
+\begin_layout Subsection
+Basic Engineering Considerations
+\end_layout
+
+\begin_layout Standard
+When it comes to globalizing software, there are enough engineering consideratio
+ns to fill an entire course (in fact, we are creating one).
+ For the purposes of this course, we will explain at a high level what type
+ of engineering work world-ready software requires.
+\end_layout
+
+\begin_layout Subsubsection*
+Data Input
+\end_layout
+
+\begin_layout Standard
+People input data via a keyboard, a mouse, inking (handwriting), or voice.
+ Software, with help from the operating system it runs on, receives the
+ keyboard strokes, mouse clicks, writing, or speech that someone enters,
+ interprets it, and then takes the appropriate action.
+ That’s just a complicated way of saying that your users need a way to get
+ words and commands into your software.
+ Different countries use different standard keyboard layouts, arranged to
+ best facilitate entering text in the local language or languages.
+ Characters may swap positions from one keyboard layout to the next.
+ Since standard keyboards cannot possibly accommodate the thousands of character
+s that Asian languages use, an additional piece of software called an input
+ method editor, or IME, is necessary to convert multiple keystrokes into
+ a single ideographic character.
+\end_layout
+
+\begin_layout Standard
+For properly managing input based on locale, the operating system is your
+ friend.
+ It contains drivers for multiple keyboard layouts, and ships with standard
+ Input Method Editors so you don’t have to write your own.
+ Recognition engines, which are cloud-based these days, convert speech and
+ handwriting into text or commands.
+ Given how much computer science and big data goes into properly converting
+ even one language, we suggest using engines that someone else built rather
+ than trying to construct your own, unless you are a linguist or a researcher,
+ in which case go for it.
+\end_layout
+
+\begin_layout Subsubsection*
+Data Manipulation
+\end_layout
+
+\begin_layout Standard
+“Data manipulation” may sound daunting, but it simply means changing the
+ data in some way, for example sorting a list, capitalizing a letter, formatting
+ a date, or comparing one string of text to another.
+ Operating systems and programming languages offer functions for these types
+ of operations, which are dependent on language or cultural conventions
+ or both.
+\end_layout
+
+\begin_layout Standard
+Converting data from one system to another before transmitting it or after
+ receiving it to preserve data integrity is what most people mean when they
+ say “system interoperability.” E-mail programs, for example, convert timestamps
+ to the message recipient’s time zone.
+ Properly globalized software will convert data to the form each market
+ expects, for example dates, times, and numbers with the correct formats.
+ It will also convert between character encodings so that the right characters
+ appear on screen instead of question marks, boxes, or the wrong script
+ (see the unit on terminology for an explanation of encodings).
+\end_layout
+
+\begin_layout Subsubsection*
+Data Display
+\end_layout
+
+\begin_layout Standard
+There are two steps to displaying data, specifically text: laying it out
+ and rendering it.
+ Operating systems contain functions to help with text layout, which isn’t
+ always a straightforward proposition.
+\end_layout
+
+\begin_layout Standard
+For example, Arabic scripts (used for languages such as Arabic, Farsi, Pashtu,
+ and Urdu) and Hebrew scripts (used for Hebrew and Yiddish) are read from
+ right-to-left (RTL).
+ For these scripts, software needs to convert the logical order (how the
+ user enters text) and the visual order (how the characters appear on screen).
+ It gets more complex when text mixes left-to-right (LTR) and RTL characters.
+ For example, positioning characters and moving the caret in a bidirectional
+ context can be particularly challenging.
+\end_layout
+
+\begin_layout Standard
+Another aspect of text layout and display is contextual shaping of characters.
+ For the Arabic and Indic family of languages, a character's glyph (that
+ is, the actual shape of a character image) can change significantly depending
+ on the glyph's position within a word and the characters that precede or
+ follow it.
+ Some characters in Arabic have several different shapes depending on their
+ context.
+ Here’s where it gets complicated.
+ Standards like Unicode assign each distinct character a distinct number,
+ or code point, so that computers can identify them.
+ Different shapes of the same character don’t have distinct code points,
+ they just have different glyphs.
+ An example of three characters with the same code point but different glyphs
+ is “a” vs.
+ italic “a” vs.
+ bold “a.” Fonts contain multiple glyphs for the same character, and they
+ have their own tables.
+ The third course will cover this topic in far more detail.
+ All you need to know for now is that when it comes to laying out and displaying
+ bidirectional text, “It’s complicated.”
+\end_layout
+
+\begin_layout Standard
+Word and line breaking, hyphenation, and word wrapping can also be complicated,
+ particularly for text containing multiple languages.
+ Latin script follows straightforward rules, such as breaking a line at
+ a space, tab, or hyphen.
+ For languages like Thai, Khmer, Chinese, Japanese, and Korean, words run
+ together.
+ There are no spaces between the end of one word and the beginning of the
+ next, which makes word breaking in such languages more complex, requiring
+ grammatical analysis and word matching in dictionaries.
+\end_layout
+
+\begin_layout Standard
+Take Japanese, for example.
+ Japanese line breaking is based on the kinsoku rules—you can break lines
+ between any two characters, with several exceptions:
+\end_layout
+
+\begin_layout Itemize
+A line of text cannot end with any leading characters, such as opening quotation
+ marks, opening parentheses, and currency signs, that shouldn't be separated
+ from succeeding characters.
+ 
+\end_layout
+
+\begin_layout Itemize
+A line of text cannot begin with any following characters, such as closing
+ quotation marks, closing parentheses, and punctuation marks, that shouldn't
+ be separated from preceding characters.
+ 
+\end_layout
+
+\begin_layout Itemize
+Certain overflow characters (such as punctuation characters) are allowed
+ to extend beyond the right margin for horizontal text or below the bottom
+ margin for vertical text.
+ 
+\end_layout
+
+\begin_layout Standard
+You see, it’s complicated.
+\end_layout
+
+\begin_layout Subsubsection*
+Have Compassion For Your Users
+\end_layout
+
+\begin_layout Standard
+If you have read both this unit and the unit on basic User Experience design
+ considerations, you now have a better idea of why creating international
+ software can be challenging, time consuming, and expensive.
+ If you ship your software without globalizing the design or the code, imagine
+ how frustrating life could be for some of your international users.
+ Dialog box text looks squished together, the “undo” icon looks backwards
+ to you, characters sort in the wrong order, short date formats are reversed,
+ you can’t type kanji characters into your documents, the software displays
+ the wrong glyph for an Arabic character in the middle of a word, and line
+ breaks split words in half in nonsensical ways.
+ Watch the next video for some real-life examples of frustrating user experience
+s.
+\end_layout
+
 \begin_layout Section
 UX and Engineering Errors 
 \end_layout
 
 \begin_layout Section
 World-Ready Marketing
+\end_layout
+
+\begin_layout Subsection*
+World Ready Marketing
+\end_layout
+
+\begin_layout Standard
+A Microsoft subsidiary once ran into trouble when they photoshopped an ad
+ used in the United States before publishing it in their country.
+ They replaced the head of the African American model in the ad with the
+ head of a white person.
+ It might have gone unnoticed, but they neglected to change the color of
+ the model’s hands.
+ Whereas they may have felt they were trying to make the ad visuals more
+ representative of their country, which has a small black population, their
+ actions came across as racist.
+ Microsoft took down the ad and issued an apology.
+ But the press still pounced.
+ One headline labeled the incident “one of the biggest racist Photoshop
+ disasters ever.” And the story lived on when the tech news blog TechCrunch
+ sponsored a contest encouraging readers to submit parodies of the ad.
+\end_layout
+
+\begin_layout Standard
+Marketing campaigns are no different than software when it comes to cultural
+ sensitivities.
+ If you’ve ever watched a compilation of “the best television ads of the
+ year” you probably said to yourself, at least once, “How on earth did they
+ get away with that?” What’s considered catchy or edgy in one culture may
+ be too much for another.
+\end_layout
+
+\begin_layout Standard
+Unless you work for a company with deep pockets that is willing to give
+ you funding, you won’t have a big marketing budget anyway.
+ But you can still ensure that the marketing you do disseminate has a better
+ chance of resonating in multiple countries.
+\end_layout
+
+\begin_layout Standard
+Consider branding:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Your company name
+\series default
+: Startups these days like to choose cool-sounding names.
+ One technique is to take a word relevant to the business (which ideally
+ can be used as a verb) and give it a clever spelling, for example, deleting
+ a vowel or changing “ph” to “f” or “k” to “c.” People who do not speak your
+ language, however, may not grasp the reference behind the original word,
+ much less the respelled one.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Your product name
+\series default
+: Choose wisely.
+ Just remember the lesson of the Chevy Nova, a car whose name means “bright,
+ yet dying star” in English but “doesn’t go” in Spanish.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Your tagline
+\series default
+: You may come up with a pithy, poetic tagline for your product that makes
+ perfect use of metaphor, alliteration, and clever homonyms.
+ And all the pithiness, poetry, and alliteration will disappear the moment
+ it’s translated into another language.
+ The homonym effect will be lost, and the metaphor will no longer make sense.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Your color palette
+\series default
+: See Module One for a discussion on colors and cultures.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Your logo
+\series default
+: If your product logo is a representation of a “thing” make sure the representa
+tion is accurate, meaningful, and acceptable across cultures.
+ A US mailbox is not international, a dragon fruit is unfamiliar to many
+ non-Asians, and some people eat animals others view as sacred.
+ 
+\end_layout
+
+\begin_layout Standard
+As branding is a combination of the elements described above, you need to
+ think not only about the individual pieces, but also what they signify
+ when put together.
+ Choose a color scheme for your icon whose symbolism has a wide range of
+ interpretation globally, use an obscure literary reference for a product
+ name, and a tagline that makes brilliant use of local slang, and without
+ realizing it you could be marketing death for kittens on the other side
+ of the world.
+\end_layout
+
+\begin_layout Subsection*
+Sending Your Message
+\end_layout
+
+\begin_layout Standard
+Messaging forms the core of marketing campaigns and your tagline is just
+ one expression of your messaging.
+ Visuals also send a message, as does placement—advertising a product on
+ a luxury website sends a different message from advertising on a discount
+ website.
+ One of your instructors once worked with an Asian hardware company that
+ made a very upscale, fashion-conscious device and chose to sell it in the
+ United States exclusively through a store that Americans consider a discount
+ retailer, something they did not realize until after they had closed the
+ deal.
+\end_layout
+
+\begin_layout Standard
+Sometimes it works to use the same messaging in international marketing
+ campaigns, translated into multiple languages.
+ Then again, sometimes it doesn’t.
+ Different features may resonate in different markets.
+ Perhaps what you consider a minor feature becomes the major selling point
+ in one or two markets, something you would never have expected.
+ Even the perfect translation of the perfect marketing copy could seem awkward
+ because it doesn’t translate culturally.
+ To give an overly simplistic example, saying that your product will protect
+ people from the cold of December doesn’t make to people who live in tropical
+ climates, or in the Southern Hemisphere, where it’s summer in December.
+\end_layout
+
+\begin_layout Standard
+Visuals and graphics can be particularly problematic, as our opening story
+ demonstrates.
+ Some cultures think nothing of using sexy women to advertise software products.
+ Others find it inappropriate.
+ In Microsoft’s earlier days, Redmond employees might put up a subsidiary’s
+ product poster that brought Human Resources running down the hallway.
+ Use of sports analogies can also be problematic.
+ What Americans think of as “football” isn’t how the rest of the world thinks
+ of it.
+\end_layout
+
+\begin_layout Standard
+Any marketing messaging or imagery has the potential for offending someone
+ somewhere in the world.
+ You will lower the odds, however, if you check with people who are authorities
+ on the markets you plan to enter.
+ If you don’t have the resources to hire an international advertising agency,
+ you can at least do some searches on the Internet.
+ We submitted a question about how to market software to Koreans to a blog
+ called “Ask a Korean.” If you can find other good Internet resources, please
+ post them in the course Wiki.
+ If you have good advice to give, please post that too.
 \end_layout
 
 \end_body
